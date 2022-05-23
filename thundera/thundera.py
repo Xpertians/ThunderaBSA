@@ -16,6 +16,7 @@ os.environ['LC_ALL'] = 'C.UTF-8'
 debug = ErrorHandler.ErrorHandler(__name__)
 filelist = []
 
+
 @click.command()
 @click.argument(
     'target',
@@ -50,7 +51,9 @@ def cli(target, scan):
         if os.path.isdir(target):
             eMSG = "Scanning the folder "+target
             print(eMSG)
-            paths = [os.path.join(target, fn) for fn in next(os.walk(target))[2]]
+            paths = [
+                os.path.join(target, fn)
+                for fn in next(os.walk(target))[2]]
             filelist.extend(paths)
             Scanner.Scanner(debug, filelist)
         elif os.path.isfile(target):

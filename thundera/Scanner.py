@@ -27,7 +27,9 @@ class Scanner:
                     zip_dir = os.path.splitext(file)[0]
                     zip_ref.extractall(zip_dir)
                     filelist.remove(file)
-                    paths = [os.path.join(zip_dir, fn) for fn in next(os.walk(zip_dir))[2]]
+                    paths = [
+                        os.path.join(zip_dir, fn)
+                        for fn in next(os.walk(zip_dir))[2]]
                     filelist.extend(paths)
         print(filelist)
 
