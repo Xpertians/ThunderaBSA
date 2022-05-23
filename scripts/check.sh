@@ -4,7 +4,7 @@ if [ ! -d "logs" ]; then
 fi
 
 echo "Removing old Thundera WHL"
-pip3 uninstall thundera-bsa -y > logs/pip3uninstall.log
+pip3 uninstall thunderabsa -y > logs/pip3uninstall.log
 
 echo "Checking PEP8"
 python3 -m pycodestyle --exclude='*testfiles*' . | grep -v 'build' | grep -v 'dist' | grep -v 'W605'> logs/pep8.log
@@ -25,15 +25,7 @@ echo "Installing old Thundera WHL"
 python3 setup.py install > logs/pip3install.log
 
 echo "Running Thundera WHL"
-#thundera ./testfiles/folder/
-#thundera ./thundera/
-#thundera /dev/null
-#thundera ononono
-#thundera --help
-#thundera ./testfiles/libwebrtc.a.zip
-#thundera ./testfiles/libLogger.a
 thundera ./testfiles/FFmpeg-n3.0.zip
-#thundera ./testfiles/libmedia.dylib
 
 echo "Deactivating Thundera ENV"
 deactivate
