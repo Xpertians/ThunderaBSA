@@ -8,13 +8,13 @@ import terminal_banner
 from shutil import which
 from pathlib import Path
 from thundera.libs import ErrorHandler
+from . import Scanner
 
 os.environ['LANG'] = 'C.UTF-8'
 os.environ['LC_ALL'] = 'C.UTF-8'
 
 debug = ErrorHandler.ErrorHandler(__name__)
 filelist = []
-archives = []
 
 @click.command()
 @click.argument(
@@ -52,10 +52,12 @@ def cli(target, scan):
             print(eMSG)
             paths = [os.path.join(target, fn) for fn in next(os.walk(target))[2]]
             filelist.extend(paths)
+            Scanner.Scanner(debug, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning the file "+target
             print(eMSG)
             filelist.append(target)
+            Scanner.Scanner(debug, filelist)
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)
