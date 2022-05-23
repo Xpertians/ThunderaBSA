@@ -8,10 +8,6 @@ import terminal_banner
 from shutil import which
 from pathlib import Path
 from thundera.libs import ErrorHandler
-from thundera.libs import FileScanner
-from thundera.libs import FolderScanner
-from thundera.libs import File
-
 
 os.environ['LANG'] = 'C.UTF-8'
 os.environ['LC_ALL'] = 'C.UTF-8'
