@@ -9,7 +9,7 @@ ThunderaBSA doesn't perform reverse engineering over the software. Instead, it e
 The CLI (ThunderaBSA CLI) it's one of the three main components of the project. The CLI tool scan files to extract symbols and export the "symbols" to a report file. The reports can be used later by other components to perform the symbol matching offline.
 
 ## Installation
-ThunderaBSA-CLI requires a few tools to be available on your system:
+ThunderaBSA requires a few tools to be available on your system:
 
 $ sudo apt install python3-pip
 

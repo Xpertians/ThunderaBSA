@@ -13,20 +13,21 @@ os.environ['LANG'] = 'C.UTF-8'
 os.environ['LC_ALL'] = 'C.UTF-8'
 
 debug = ErrorHandler.ErrorHandler(__name__)
-
+filelist = []
+archives = []
 
 @click.command()
 @click.argument(
     'target',
     type=click.Path(exists=True)
 )
-@click.option(
-    '-wd',
-    '--workdir',
-    default=str(calendar.timegm(time.gmtime())),
-    help='Working directory'
-)
-def cli(target, workdir):
+@click.option('--scan/--no-scan', default=False)
+def cli(target, scan):
+
+    rv = sys.platform
+    if scan:
+        rv = rv.upper() + '!!!!111'
+    click.echo(rv)
 
     """ Thundera BSA """
     banner_txt = "Thundera Binary Static Analysis (BSA)"
@@ -49,11 +50,12 @@ def cli(target, workdir):
         if os.path.isdir(target):
             eMSG = "Scanning the folder "+target
             print(eMSG)
-            # Scanner
+            paths = [os.path.join(target, fn) for fn in next(os.walk(target))[2]]
+            filelist.extend(paths)
         elif os.path.isfile(target):
             eMSG = "Scanning the file "+target
             print(eMSG)
-            # Scanner
+            filelist.append(target)
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)
