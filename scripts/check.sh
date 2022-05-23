@@ -25,7 +25,7 @@ echo "Installing old Thundera WHL"
 python3 setup.py install > logs/pip3install.log
 
 echo "Running Thundera WHL"
-thundera ./testfiles/FFmpeg-n3.0.zip
+thundera ./testfiles/libgcc_s.so.1
 
 echo "Deactivating Thundera ENV"
 deactivate

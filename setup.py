@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
-VERSION = '0.1.2'
+VERSION = '0.1.6'
 PACKAGE_NAME = 'thunderabsa'
 AUTHOR = 'Oscar Valenzuela B.'
 AUTHOR_EMAIL = 'thunderabsa-pypi@amazon.com'
@@ -47,4 +47,5 @@ setup(
         [console_scripts]
         thundera=thundera.thundera:cli
     ''',
+    zip_safe=False
 )

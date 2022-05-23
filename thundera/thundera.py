@@ -49,11 +49,11 @@ def cli(target, workdir):
         if os.path.isdir(target):
             eMSG = "Scanning the folder "+target
             print(eMSG)
-            scanner = FolderScanner.FolderScanner(target)
+            # Scanner
         elif os.path.isfile(target):
             eMSG = "Scanning the file "+target
             print(eMSG)
-            scanner = FileScanner.FileScanner(target)
+            # Scanner
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)
