@@ -4,7 +4,7 @@ import sys
 from setuptools import setup, find_packages
 
 HERE = pathlib.Path(__file__).parent
-VERSION = '0.1.1'
+VERSION = '0.1.2'
 PACKAGE_NAME = 'thunderabsa'
 AUTHOR = 'Oscar Valenzuela B.'
 AUTHOR_EMAIL = 'thunderabsa-pypi@amazon.com'
@@ -21,7 +21,8 @@ INSTALL_REQUIRES = [
       'binaryornot',
       'tabulate',
       'numpy',
-      'lief'
+      'lief',
+      'twine'
 ]
 
 setup(
