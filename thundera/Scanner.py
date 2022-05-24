@@ -18,6 +18,8 @@ class Scanner:
         self.filelist = filelist
         self.exfilelist = []
         self.enumerate_files(filelist)
+        print(self.filelist)
+        print(self.exfilelist)
 
     def enumerate_files(self, filelist):
         for file in filelist:
@@ -39,8 +41,7 @@ class Scanner:
                             for aFile in cfs:
                                 file_path = str(os.path.join(cdp, aFile))
                                 self.filelist.append(file_path)
-        print(self.filelist)
-        print(self.exfilelist)
+            # check subfolders for zip files
 
     def is_archive(self, file_type):
         # This function needs improvement

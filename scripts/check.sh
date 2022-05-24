@@ -28,6 +28,7 @@ echo "Running Thundera WHL"
 thundera ./testfiles/folder.zip --no-scan
 thundera --help
 #thundera /bin/
+rm -rf ./testfiles/folder/
 
 echo "Deactivating Thundera ENV"
 deactivate
