@@ -27,6 +27,7 @@ class Scanner:
                 self.filelist.remove(file)
             else:
                 # Quick check for archive file
+                # Needs improvement for anidaded zip files
                 mime = magic.Magic(mime=True)
                 filetype = mime.from_file(file)
                 if self.is_archive(filetype):
@@ -34,10 +35,10 @@ class Scanner:
                         zip_dir = os.path.splitext(file)[0]
                         zip_ref.extractall(zip_dir)
                         self.filelist.remove(file)
-                        paths = [
-                            os.path.join(zip_dir, fn)
-                            for fn in next(os.walk(zip_dir))[2]]
-                        self.filelist.extend(paths)
+                        for cdp, csb, cfs in os.walk(zip_dir):
+                            for aFile in cfs:
+                                file_path = str(os.path.join(cdp, aFile))
+                                self.filelist.append(file_path)
         print(self.filelist)
         print(self.exfilelist)
 

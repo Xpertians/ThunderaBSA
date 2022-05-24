@@ -54,10 +54,10 @@ def cli(target, scan):
         if os.path.isdir(target):
             eMSG = "Scanning the folder "+target
             print(eMSG)
-            paths = [
-                os.path.join(target, fn)
-                for fn in next(os.walk(target))[2]]
-            filelist.extend(paths)
+            for cdp, csb, cfs in os.walk(target):
+                for aFile in cfs:
+                    file_path = str(os.path.join(cdp, aFile))
+                    self.filelist.append(file_path)
             Scanner.Scanner(debug, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning the file "+target
