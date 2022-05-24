@@ -16,17 +16,28 @@ from slugify import slugify
 from zipfile import ZipFile
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
+from thundera.libs import ErrorHandler
+from thundera.libs import FileHandler
+
 
 class Scanner:
 
-    def __init__(self, debug, filelist):
+    def __init__(self, errorHandler, filelist):
+        self.debug = errorHandler
         self.filelist = filelist
         self.exfilelist = []
         self.enumerate_files(filelist)
         # print("filelist", self.filelist)
         # print("exfilelist", self.exfilelist)
-        #for filepath in self.filelist:
-            #print("file:", filepath)
+        for filepath in self.filelist:
+            print("file:", filepath)
+            #if not self.isarchive and not self.forceign:
+            #fCSV = os.path.splitext(filename)[0]
+            fileHandler = FileHandler.FileHandler(
+                self.debug,
+                filepath)
+            symbols = fileHandler.run_handler()
+            print(symbols)
             #self.process_file(filepath)
 
     def enumerate_files(self, filelist):
@@ -38,7 +49,7 @@ class Scanner:
             else:
                 mime = magic.Magic(mime=True)
                 filetype = mime.from_file(file)
-                print("file:", file, filetype)
+                # print("file:", file, filetype)
                 if self.is_archive(filetype):
                     new_dir = os.path.splitext(file)[0]
                     if tarfile.is_tarfile(file):
@@ -60,31 +71,6 @@ class Scanner:
                             if self.is_archive(filetype):
                                 sub_flist.append(file_path)
                                 self.enumerate_files(sub_flist)
-
-    def process_file(self, filepath):
-        try:
-            fd = open(filepath, "rb")
-            data = fd.read().decode("utf-8", "ignore")
-            fd.close()
-        except:
-            print("There was an error opening the file:\n")
-            print(filepath)
-
-        count = 0
-        window = 5
-        charslist = []
-        printable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_.1234567890!@$%&*"
-        for character in data:
-            if character in printable:
-                charslist.append(character)
-                count += 1
-            else:
-                if count >= window:
-                    print(''.join(charslist[-count:]))
-                    count = 0
-        if count >= window:
-            print(''.join(charslist[-count:]))
-
 
     def is_archive(self, file_type):
         # This function needs improvement
