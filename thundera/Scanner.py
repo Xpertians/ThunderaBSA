@@ -30,7 +30,6 @@ class Scanner:
         # print("filelist", self.filelist)
         # print("exfilelist", self.exfilelist)
         for filepath in self.filelist:
-            print("file:", filepath)
             #if not self.isarchive and not self.forceign:
             #fCSV = os.path.splitext(filename)[0]
             fileHandler = FileHandler.FileHandler(
@@ -61,6 +60,8 @@ class Scanner:
                             zip_ref.extractall(new_dir)
                             self.filelist.remove(file)
                     else:
+                        self.debug.error("Missing Handler for:", filetype)
+                        self.debug.error(">", file)
                         print("Missing Handler for:", filetype)
                         print(">", file)
                     for cdp, csb, cfs in os.walk(new_dir):

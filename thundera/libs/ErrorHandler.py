@@ -31,8 +31,6 @@ class ErrorHandler:
 
     def error(self, message):
         self.logger.error(message)
-        # print(message)
 
     def info(self, message):
         self.logger.info(message)
-        # print(message)

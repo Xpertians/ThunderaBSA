@@ -24,7 +24,6 @@ class FileHandler:
         try:
             handlers = self.preload_handlers()
             handler = handlers[self.filetype]
-            print(self.filetype, self.filepath)
             return handler(self.filepath, self.checksum)
         except KeyError:
             self.debug.error('handler not implemented for ' + self.filetype)
@@ -106,8 +105,8 @@ class FileHandler:
             data = fd.read().decode("utf-8", "ignore")
             fd.close()
         except:
-            print("There was an error opening the file:\n")
-            print(filepath)
+            self.debug.error("There was an error opening the file:\n")
+            self.debug.error(filepath)
         symbols = []
         count = 0
         window = 5
