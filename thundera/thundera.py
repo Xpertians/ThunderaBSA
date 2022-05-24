@@ -22,13 +22,16 @@ filelist = []
     'target',
     type=click.Path(exists=True)
 )
-@click.option('--scan/--no-scan', default=False)
+@click.option(
+    '--scan/--no-scan',
+    default=False,
+    help='Number of greetings.')
 def cli(target, scan):
 
     rv = sys.platform
     if scan:
         rv = rv.upper() + '!!!!111'
-    click.echo(rv)
+    # click.echo(rv)
 
     """ Thundera BSA """
     banner_txt = "Thundera Binary Static Analysis (BSA)"

@@ -25,9 +25,8 @@ echo "Installing old Thundera WHL"
 python3 setup.py install > logs/pip3install.log
 
 echo "Running Thundera WHL"
-# thundera ./testfiles/libgcc_s.so.1 --scan
-thundera ./testfiles/libgcc_s.so.1 --no-scan
 thundera ./testfiles/libgcc_s.zip --no-scan
+thundera ./testfiles/libgcc_s.zip --help
 # thundera /bin/
 
 echo "Deactivating Thundera ENV"
