@@ -25,7 +25,7 @@ echo "Installing old Thundera WHL"
 python3 setup.py install > logs/pip3install.log
 
 echo "Running Thundera WHL"
-thundera ./testfiles/libgcc.zip --no-scan
+thundera ./testfiles/folder.zip --no-scan
 thundera --help
 #thundera /bin/
 
