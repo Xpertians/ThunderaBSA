@@ -110,6 +110,7 @@ class FileHandler:
             'application/x-sharedlib': self.handle_sharedlib,
 
             # Parsing Strings
+            'application/octet-stream': self.ignore,
             'application/x-dosexec': self.handle_strings,
             'font/sfnt': self.handle_strings,
 
@@ -117,7 +118,6 @@ class FileHandler:
             'text/plain': self.ignore,
             'text/html': self.ignore,
             'text/x-shellscript': self.ignore,
-            'application/octet-stream': self.ignore,
             'application/x-ms-pdb': self.ignore,
             'image/vnd.microsoft.icon': self.ignore,
             'text/x-shellscript': self.ignore,

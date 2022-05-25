@@ -36,13 +36,14 @@ class Scanner:
                 self.debug,
                 filepath)
             symbols = fileHandler.run_handler()
-            # print(fileHandler.exp_checksum())
-            print('file:', filepath)
-            print('checksum:', fileHandler.exp_checksum())
             if type(symbols) == str:
                 symbols = []
-            print(type(symbols))
-            print('symbols:', len(symbols))
+            if symbols is None:
+                symbols = []
+            if len(symbols) >= 1:
+                print('file:', filepath)
+                print('checksum:', fileHandler.exp_checksum())
+                print('symbols:', len(symbols))
 
     def enumerate_files(self, filelist):
         sub_flist = []
