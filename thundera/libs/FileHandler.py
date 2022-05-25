@@ -92,7 +92,7 @@ class FileHandler:
         return ctags.run()
 
     def preload_handlers(self):
-        # This should be replaced by a BD
+        # This should be replaced by a config file
         return {
             # Parsing language specific
             'text/x-c': self.handle_cplusplus,
@@ -105,8 +105,8 @@ class FileHandler:
             'text/x-objective-c': self.handle_objectivec,
 
             # Parsing binaries and libs
-            #'application/x-mach-binary': self.handle_mach_o,
-            #'application/x-archive': self.handle_ar,
+            # 'application/x-mach-binary': self.handle_mach_o,
+            # 'application/x-archive': self.handle_ar,
             'application/x-sharedlib': self.handle_sharedlib,
 
             # Parsing Strings
@@ -151,14 +151,15 @@ class FileHandler:
             fd = open(filepath, "rb")
             data = fd.read().decode("utf-8", "ignore")
             fd.close()
-        except:
+        except Exception:
             self.debug.error("There was an error opening the file:\n")
             self.debug.error(filepath)
         symbols = []
         count = 0
         window = 5
         charslist = []
-        printable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz-_.1234567890!@$%&*"
+        printable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        printable = printable+"-_.1234567890!@$%&*"
         for character in data:
             if character in printable:
                 charslist.append(character)

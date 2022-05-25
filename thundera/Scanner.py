@@ -30,15 +30,19 @@ class Scanner:
         # print("filelist", self.filelist)
         # print("exfilelist", self.exfilelist)
         for filepath in self.filelist:
-            #if not self.isarchive and not self.forceign:
-            #fCSV = os.path.splitext(filename)[0]
+            # if not self.isarchive and not self.forceign:
+            # fCSV = os.path.splitext(filename)[0]
             fileHandler = FileHandler.FileHandler(
                 self.debug,
                 filepath)
             symbols = fileHandler.run_handler()
-            print(fileHandler.exp_checksum())
-            #print(symbols)
-            #self.process_file(filepath)
+            # print(fileHandler.exp_checksum())
+            print('file:', filepath)
+            print('checksum:', fileHandler.exp_checksum())
+            if type(symbols) == str:
+                symbols = []
+            print(type(symbols))
+            print('symbols:', len(symbols))
 
     def enumerate_files(self, filelist):
         sub_flist = []
