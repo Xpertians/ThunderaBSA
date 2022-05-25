@@ -103,10 +103,10 @@ class FileHandler:
             'text/x-rust': self.handle_rust,
             'text/x-java': self.handle_java,
             'text/x-objective-c': self.handle_objectivec,
+
+            # Parsing binaries and libs
             #'application/x-mach-binary': self.handle_mach_o,
             #'application/x-archive': self.handle_ar,
-
-            # Parsing Libs
             'application/x-sharedlib': self.handle_sharedlib,
 
             # Parsing Strings
