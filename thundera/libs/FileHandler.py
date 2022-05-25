@@ -20,6 +20,12 @@ class FileHandler:
         self.filetype = self.get_mime(filepath)
         self.checksum = self.get_checksum(filepath)
 
+    def exp_mime(self):
+        return self.filetype
+
+    def exp_checksum(self):
+        return self.checksum
+
     def run_handler(self):
         try:
             handlers = self.preload_handlers()
@@ -41,6 +47,44 @@ class FileHandler:
         symbols = self.get_strings(filepath)
         return list(set(symbols))
 
+    def handle_objectivec(self, filepath, checksum):
+        # needs checking
+        ctags = CtagsHandler.CtagsHandler(filepath)
+        ctags.setLang('objectivec')
+        ctags.setLangMap('objectivec:.h.m')
+        return ctags.run()
+
+    def handle_cplusplus(self, filepath, checksum):
+        # needs checking
+        ctags = CtagsHandler.CtagsHandler(filepath)
+        ctags.setOption('--kinds-C++=+l')
+        ctags.setOption('-o -')
+        return ctags.run()
+
+    def handle_rust(self, filepath, checksum):
+        ctags = CtagsHandler.CtagsHandler(filepath)
+        ctags.setLang('Rust')
+        ctags.setLangMap('Rust:.rs')
+        return ctags.run()
+
+    def handle_java(self, filepath, checksum):
+        ctags = CtagsHandler.CtagsHandler(filepath)
+        ctags.setLang('Java')
+        ctags.setLangMap('java:+.aj')
+        return ctags.run()
+
+    def handle_ruby(self, filepath, checksum):
+        ctags = CtagsHandler.CtagsHandler(filepath)
+        ctags.setLang('ruby')
+        ctags.setLangMap('ruby:+.rake')
+        return ctags.run()
+
+    def handle_perl(self, filepath, checksum):
+        ctags = CtagsHandler.CtagsHandler(filepath)
+        ctags.setLang('Perl')
+        ctags.setLangMap('Perl:+.t')
+        return ctags.run()
+
     def handle_python(self, filepath, checksum):
         ctags = CtagsHandler.CtagsHandler(filepath)
         ctags.setLang('python')
@@ -50,18 +94,20 @@ class FileHandler:
     def preload_handlers(self):
         # This should be replaced by a BD
         return {
-            #'text/x-c': self.handle_cplusplus,
-            #'text/x-c++': self.handle_cplusplus,
+            # Parsing language specific
+            'text/x-c': self.handle_cplusplus,
+            'text/x-c++': self.handle_cplusplus,
             'text/x-python': self.handle_python,
-            #'text/x-perl': self.handle_perl,
-            #'text/x-ruby': self.handle_ruby,
-            #'text/x-rust': self.handle_rust,
-            #'text/x-java': self.handle_java,
-            #'text/x-objective-c': self.handle_objectivec,
+            'text/x-perl': self.handle_perl,
+            'text/x-ruby': self.handle_ruby,
+            'text/x-rust': self.handle_rust,
+            'text/x-java': self.handle_java,
+            'text/x-objective-c': self.handle_objectivec,
             #'application/x-mach-binary': self.handle_mach_o,
             #'application/x-archive': self.handle_ar,
 
-            #'application/x-sharedlib': self.handle_sharedlib,
+            # Parsing Libs
+            'application/x-sharedlib': self.handle_sharedlib,
 
             # Parsing Strings
             'application/x-dosexec': self.handle_strings,
@@ -84,6 +130,7 @@ class FileHandler:
             'image/x-portable-pixmap': self.ignore,
             'image/webp': self.ignore,
             'image/png': self.ignore,
+            'image/svg+xml': self.ignore,
             'image/x-tga': self.ignore,
             'image/g3fax': self.ignore,
             'image/gif': self.ignore,

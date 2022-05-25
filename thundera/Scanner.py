@@ -36,7 +36,8 @@ class Scanner:
                 self.debug,
                 filepath)
             symbols = fileHandler.run_handler()
-            print(symbols)
+            print(fileHandler.exp_checksum())
+            #print(symbols)
             #self.process_file(filepath)
 
     def enumerate_files(self, filelist):
