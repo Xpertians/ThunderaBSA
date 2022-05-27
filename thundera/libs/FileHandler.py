@@ -18,6 +18,7 @@ class FileHandler:
         self.debug = errorHandler
         self.filepath = filepath
         self.filetype = self.get_mime(filepath)
+        self.filesize = os.stat(filepath).st_size
         self.checksum = self.get_checksum(filepath)
 
     def exp_mime(self):
@@ -110,7 +111,7 @@ class FileHandler:
             'application/x-sharedlib': self.handle_sharedlib,
 
             # Parsing Strings
-            'application/octet-stream': self.ignore,
+            'application/octet-stream': self.handle_strings,
             'application/x-dosexec': self.handle_strings,
             'font/sfnt': self.handle_strings,
 
@@ -147,29 +148,33 @@ class FileHandler:
         return ''
 
     def get_strings(self, filepath):
-        try:
-            fd = open(filepath, "rb")
-            data = fd.read().decode("utf-8", "ignore")
-            fd.close()
-        except Exception:
-            self.debug.error("There was an error opening the file:\n")
-            self.debug.error(filepath)
         symbols = []
-        count = 0
-        window = 5
-        charslist = []
-        printable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-        printable = printable+"-_.1234567890!@$%&*"
-        for character in data:
-            if character in printable:
-                charslist.append(character)
-                count += 1
-            else:
-                if count >= window:
-                    symbols.append(''.join(charslist[-count:]))
-                    count = 0
-        if count >= window:
-            symbols.append(''.join(charslist[-count:]))
+        if self.filesize >= 10485760:
+            self.debug.info('ignoring ' + self.filepath)
+        else:
+            try:
+                fd = open(filepath, "rb")
+                data = fd.read().decode("utf-8", "ignore")
+                fd.close()
+            except Exception:
+                self.debug.error("There was an error opening the file:\n")
+                self.debug.error(filepath)
+            symbols = []
+            count = 0
+            window = 5
+            charslist = []
+            printable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+            printable = printable+"-_.1234567890!@$%&*"
+            for character in data:
+                if character in printable:
+                    charslist.append(character)
+                    count += 1
+                else:
+                    if count >= window:
+                        symbols.append(''.join(charslist[-count:]))
+                        count = 0
+            if count >= window:
+                symbols.append(''.join(charslist[-count:]))
         return symbols
 
     def demangle(self, name):
