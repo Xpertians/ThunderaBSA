@@ -36,6 +36,44 @@ class FileHandler:
             self.debug.error('handler not implemented for ' + self.filetype)
             self.debug.error('skipping ' + self.filepath)
 
+    def handle_ar(self, filepath, checksum):
+        rst = self.handle_strings(filepath, checksum)
+        if(path.exists(filepath)):
+            cmd = 'ar t ' + filepath
+            process = subprocess.Popen(
+                cmd,
+                shell=True,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE)
+            (result, error) = process.communicate()
+            rc = process.wait()
+            process.stdout.close()
+            rstTXT = result.decode('utf-8')
+            results = re.compile(r'\W+', re.UNICODE).split(
+                ' '.join(rstTXT.split()))
+            rst.extend(",".join(results))
+        return rst
+
+    def handle_mach_o(self, filepath, checksum):
+        symbols = []
+        if os.stat(filepath).st_size <= 1048576:
+            libSO = lief.parse(filepath)
+            remove_digits = str.maketrans(',', ',', digits)
+            for i in libSO.symbols:
+                symbol = i.name
+                symbol = re.sub("[^a-zA-Z0-9]+", ",", symbol)
+                symbol = re.sub("\d+", ",", symbol)
+                symbols.extend(symbol.split(','))
+            symbols = list(set(symbols))
+            while("" in symbols):
+                symbols.remove("")
+            rst = ",".join(symbols)
+
+        if len(symbols) <= 1:
+            rst = self.handle_strings(filepath, checksum)
+
+        return rst
+
     def handle_sharedlib(self, filepath, checksum):
         libSO = lief.parse(filepath)
         symbols = []
@@ -106,7 +144,7 @@ class FileHandler:
             'text/x-objective-c': self.handle_objectivec,
 
             # Parsing binaries and libs
-            # 'application/x-mach-binary': self.handle_mach_o,
+            'application/x-mach-binary': self.handle_mach_o,
             # 'application/x-archive': self.handle_ar,
             'application/x-sharedlib': self.handle_sharedlib,
 
