@@ -30,8 +30,6 @@ class Scanner:
         # print("filelist", self.filelist)
         # print("exfilelist", self.exfilelist)
         for filepath in self.filelist:
-            # if not self.isarchive and not self.forceign:
-            # fCSV = os.path.splitext(filename)[0]
             fileHandler = FileHandler.FileHandler(
                 self.debug,
                 filepath)
@@ -44,6 +42,7 @@ class Scanner:
                 print('file:', filepath)
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
+        print(filelist)
 
     def enumerate_files(self, filelist):
         sub_flist = []
@@ -54,10 +53,10 @@ class Scanner:
             else:
                 mime = magic.Magic(mime=True)
                 filetype = mime.from_file(file)
-                # print("file:", file, filetype)
                 if self.is_archive(filetype):
                     new_dir = os.path.splitext(file)[0]
                     if tarfile.is_tarfile(file):
+                        self.filelist.remove(file)
                         file = tarfile.open(file)
                         file.extractall(new_dir)
                         file.close()
@@ -68,8 +67,6 @@ class Scanner:
                     else:
                         self.debug.error("Missing Handler for:", filetype)
                         self.debug.error(">", file)
-                        print("Missing Handler for:", filetype)
-                        print(">", file)
                     for cdp, csb, cfs in os.walk(new_dir):
                         for aFile in cfs:
                             file_path = str(os.path.join(cdp, aFile))
