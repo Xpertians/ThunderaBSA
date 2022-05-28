@@ -39,6 +39,9 @@ class Scanner:
                 symbols = []
             if len(symbols) >= 1:
                 self.procfiles.append(filepath)
+                basename = os.path.basename(filepath)
+                basename = os.path.splitext(basename)[0]
+                symbols.append(basename)
                 print('file:', filepath)
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
