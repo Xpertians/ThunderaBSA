@@ -26,9 +26,8 @@ class Scanner:
         self.debug = errorHandler
         self.filelist = filelist
         self.exfilelist = []
+        self.procfiles = []
         self.enumerate_files(filelist)
-        # print("filelist", self.filelist)
-        # print("exfilelist", self.exfilelist)
         for filepath in self.filelist:
             fileHandler = FileHandler.FileHandler(
                 self.debug,
@@ -39,10 +38,15 @@ class Scanner:
             if symbols is None:
                 symbols = []
             if len(symbols) >= 1:
+                self.procfiles.append(filepath)
                 print('file:', filepath)
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
-        print(filelist)
+            else:
+                self.exfilelist.append(filepath)
+        print("filelist:", len(self.filelist))
+        print("exfilelist:", len(self.exfilelist))
+        print("procfiles:", len(self.procfiles))
 
     def enumerate_files(self, filelist):
         sub_flist = []

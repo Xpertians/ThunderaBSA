@@ -152,14 +152,13 @@ class FileHandler:
             'application/octet-stream': self.handle_strings,
             'application/x-dosexec': self.handle_strings,
             'font/sfnt': self.handle_strings,
+            'text/x-shellscript': self.handle_strings,
 
             # Ignored mimetypes
             'text/plain': self.ignore,
             'text/html': self.ignore,
-            'text/x-shellscript': self.ignore,
             'application/x-ms-pdb': self.ignore,
             'image/vnd.microsoft.icon': self.ignore,
-            'text/x-shellscript': self.ignore,
             'text/xml': self.ignore,
             'application/csv': self.ignore,
             'text/x-tex': self.ignore,
