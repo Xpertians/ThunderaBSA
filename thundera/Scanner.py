@@ -24,7 +24,7 @@ from thundera.libs import RulesHandler
 class Scanner:
 
     def __init__(self, errorHandler, filelist):
-        data_idx = {}
+        data_idx = {'a': 10, 'b': 8}
         self.rh = RulesHandler.RulesHandler(errorHandler)
         self.rh.load_index(data_idx)
         self.debug = errorHandler

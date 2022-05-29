@@ -17,38 +17,38 @@ class RulesHandler:
         self.rules_path = "rules/"
         self.ign_file = "default_ignore.json"
         self.idx_file = "default_index.json"
-        self.usr_cfg_dir = os.path.expanduser("~") + "/.config/thunderabsa"
-        self.check_index_file()
+        self.usr_cfg_dir = os.path.expanduser("~") + "/.config/thunderabsa/"
+        self.create_cfg_folder()
 
-    def check_index_file(self):
-        usr_cfg = self.usr_cfg_dir + "/" + self.idx_file
-        if not os.path.isfile(usr_cfg):
+    def merge_dicts(dict1, dict2):
+        res = {**dict1, **dict2}
+        return res
+
+    def create_cfg_folder(self):
+        if not os.path.exists(self.usr_cfg_dir):
             os.makedirs(self.usr_cfg_dir, exist_ok=True)
-            orig_ign_file = os.path.join(
-                self.rules_path,
-                self.idx_file)
-            # Get local copy from rules folder
-            df_ign_file = os.path.join(self.rules_path, self.idx_file)
-            if os.path.exists(df_ign_file):
-                shutil.copyfile(df_ign_file, usr_cfg)
+
+    def create_cfg_file(self, filename):
+        cfg_file = self.usr_cfg_dir + "/" + filename
+        if not os.path.isfile(cfg_file):
+            rule_file = os.path.join(self.rules_path, filename)
+            if os.path.exists(rule_file):
+                shutil.copyfile(rule_file, cfg_file)
             else:
-                self.debug.error('index file not found: ' + ignore_file)
+                self.debug.error('index file not found: ' + rule_file)
+        return cfg_file
+
+    def update_index(self, json_data):
+        idx_path = self.create_cfg_file(self.idx_file)
+        f = open(ignore_file)
+        data = json.load(f)
+        f.close()
+        idx_merge = self.merge_dicts(data, json_data)
+        return data
+
 
     def load_index(self, data):
-        usr_cfg = self.usr_cfg_dir + "/" + self.ign_file
-        if not os.path.isfile(usr_cfg):
-            os.makedirs(self.usr_cfg_dir, exist_ok=True)
-            orig_ign_file = os.path.join(
-                self.rules_path,
-                self.ign_file)
-            # Get local copy from rules folder
-            df_ign_file = os.path.join(self.rules_path, self.ign_file)
-            if os.path.exists(df_ign_file):
-                shutil.copyfile(df_ign_file, usr_cfg)
-            else:
-                self.debug.error('index file not found: ' + ignore_file)
-        else:
-            print('exist file')
+        self.create_cfg_file(self.idx_file)
 
     def parse_index(self):
         ignore_file = os.path.join(self.rules_path, self.ign_file)
