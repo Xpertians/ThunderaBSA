@@ -44,7 +44,8 @@ class RulesHandler:
         data = json.load(f)
         f.close()
         idx_merge = self.merge_dicts(data, json_data)
-        return data
+        print(idx_merge)
+        return idx_merge
 
 
     def load_index(self, data):
