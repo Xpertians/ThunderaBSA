@@ -20,7 +20,7 @@ class RulesHandler:
         self.usr_cfg_dir = os.path.expanduser("~") + "/.config/thunderabsa/"
         self.create_cfg_folder()
 
-    def merge_dicts(dict1, dict2):
+    def merge_dicts(self, dict1, dict2):
         res = {**dict1, **dict2}
         return res
 
@@ -44,8 +44,8 @@ class RulesHandler:
         data = json.load(f)
         f.close()
         idx_merge = self.merge_dicts(data, json_data)
-        print(idx_merge)
-        return idx_merge
+        with open(idx_path, 'w', encoding='utf-8') as f:
+            f.write(json.dumps(idx_merge, ensure_ascii=False))
 
 
     def load_index(self, json_data):
