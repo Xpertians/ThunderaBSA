@@ -35,7 +35,7 @@ class RulesHandler:
             if os.path.exists(rule_file):
                 shutil.copyfile(rule_file, cfg_file)
             else:
-                self.debug.error('index file not found: ' + rule_file)
+                self.debug.error('rule file not found: ' + filename)
         return cfg_file
 
     def update_index(self, json_data):
