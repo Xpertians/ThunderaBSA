@@ -50,7 +50,7 @@ class RulesHandler:
 
     def load_index(self, json_data):
         self.create_cfg_file(self.idx_file)
-        self.update_index(json_data)
+        # self.update_index(json_data)
 
     def parse_index(self):
         ignore_file = os.path.join(self.rules_path, self.ign_file)
