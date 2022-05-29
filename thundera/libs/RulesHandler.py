@@ -59,7 +59,6 @@ class RulesHandler:
                 print(value['filename'])
         else:
             self.debug.error('index cfg file not found: ' + cfg_file)
-        # self.update_index(json_data)
 
     def parse_index(self):
         ignore_file = os.path.join(self.rules_path, self.ign_file)
@@ -71,9 +70,3 @@ class RulesHandler:
             return data
         else:
             self.debug.error('index file not found: ' + ignore_file)
-
-    # def load_ignore(self):
-        #sdsd
-
-    # def load_rule(self):
-        #sdsd
