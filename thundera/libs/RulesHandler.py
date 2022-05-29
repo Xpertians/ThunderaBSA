@@ -40,7 +40,7 @@ class RulesHandler:
 
     def update_index(self, json_data):
         idx_path = self.create_cfg_file(self.idx_file)
-        f = open(ignore_file)
+        f = open(idx_path)
         data = json.load(f)
         f.close()
         idx_merge = self.merge_dicts(data, json_data)
