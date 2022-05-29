@@ -18,11 +18,15 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from thundera.libs import ErrorHandler
 from thundera.libs import FileHandler
+from thundera.libs import RulesHandler
 
 
 class Scanner:
 
     def __init__(self, errorHandler, filelist):
+        data_idx = {}
+        self.rh = RulesHandler.RulesHandler(errorHandler)
+        self.rh.load_index(data_idx)
         self.debug = errorHandler
         self.filelist = filelist
         self.exfilelist = []

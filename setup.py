@@ -22,7 +22,8 @@ INSTALL_REQUIRES = [
       'tabulate',
       'numpy',
       'lief',
-      'twine'
+      'twine',
+      'configparser'
 ]
 
 setup(
