@@ -9,6 +9,7 @@ import gzip
 import csv
 import sys
 import mmap
+import json
 import string
 import tarfile
 import zipfile
@@ -24,9 +25,8 @@ from thundera.libs import RulesHandler
 class Scanner:
 
     def __init__(self, errorHandler, filelist):
-        data_idx = {'a': 10, 'b': 8}
         self.rh = RulesHandler.RulesHandler(errorHandler)
-        self.rh.load_index(data_idx)
+        self.rh.load_index()
         self.debug = errorHandler
         self.filelist = filelist
         self.exfilelist = []

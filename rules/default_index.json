@@ -1,1 +1,10 @@
-{"employees": [{"name": "John Doe", "department": "Marketing", "place": "Remote"}, {"name": "Jane Doe", "department": "Software Engineering", "place": "Remote"}, {"name": "Don Joe", "department": "Software Engineering", "place": "Office"}]}
+{
+    "checksum1": {
+        "filename": "filename1.json",
+        "active": true
+    },
+    "checksum2": {
+        "filename": "filename2.json",
+        "active": true
+    }
+}

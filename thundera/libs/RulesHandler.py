@@ -47,9 +47,18 @@ class RulesHandler:
         with open(idx_path, 'w', encoding='utf-8') as f:
             f.write(json.dumps(idx_merge, ensure_ascii=False))
 
-
-    def load_index(self, json_data):
-        self.create_cfg_file(self.idx_file)
+    def load_index(self):
+        cfg_file = self.create_cfg_file(self.idx_file)
+        if os.path.isfile(cfg_file):
+            f = open(cfg_file)
+            idx_dict = json.load(f)
+            f.close()
+            for key, value in idx_dict.items():
+                print(key)
+                print(value)
+                print(value['filename'])
+        else:
+            self.debug.error('index cfg file not found: ' + cfg_file)
         # self.update_index(json_data)
 
     def parse_index(self):
