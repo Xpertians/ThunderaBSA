@@ -5,7 +5,8 @@ import hashlib
 import os.path
 from os import path
 from . import ErrorHandler
-import shutil, configparser
+import shutil
+import configparser
 
 
 class RulesHandler:
@@ -60,13 +61,14 @@ class RulesHandler:
         else:
             self.debug.error('index cfg file not found: ' + cfg_file)
 
-    def parse_index(self):
-        ignore_file = os.path.join(self.rules_path, self.ign_file)
-        print(ignore_file)
-        if os.path.exists(ignore_file):
-            f = open(ignore_file)
-            data = json.load(f)
+    def load_ignore(self):
+        cfg_file = self.create_cfg_file(self.ign_file)
+        if os.path.isfile(cfg_file):
+            f = open(cfg_file)
+            ign_dict = json.load(f)
             f.close()
-            return data
+            for key, value in ign_dict.items():
+                print(key)
+                print(value)
         else:
-            self.debug.error('index file not found: ' + ignore_file)
+            self.debug.error('index cfg file not found: ' + cfg_file)

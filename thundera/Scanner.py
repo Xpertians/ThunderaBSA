@@ -27,6 +27,7 @@ class Scanner:
     def __init__(self, errorHandler, filelist):
         self.rh = RulesHandler.RulesHandler(errorHandler)
         self.rh.load_index()
+        self.rh.load_ignore()
         self.debug = errorHandler
         self.filelist = filelist
         self.exfilelist = []
