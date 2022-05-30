@@ -20,6 +20,8 @@ class RulesHandler:
         self.idx_file = "default_index.json"
         self.usr_cfg_dir = os.path.expanduser("~") + "/.config/thunderabsa/"
         self.create_cfg_folder()
+        self.load_index()
+        self.load_ignore()
 
     def file_checksum(self, file_path):
         with open(file_path, "rb") as f:
