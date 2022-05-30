@@ -77,7 +77,6 @@ class RulesHandler:
                             'rule cfg checksum not match for file '
                             + value['filename'])
                         print(checksum)
-            print(self.rules)
         else:
             self.debug.error('index cfg file not found: ' + cfg_file)
 
