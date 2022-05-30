@@ -21,6 +21,15 @@ class RulesHandler:
         self.usr_cfg_dir = os.path.expanduser("~") + "/.config/thunderabsa/"
         self.create_cfg_folder()
 
+    def file_checksum(self, file_path):
+        with open(file_path, "rb") as f:
+            file_hash = hashlib.md5()
+            chunk = f.read(8192)
+            while chunk:
+                file_hash.update(chunk)
+                chunk = f.read(8192)
+        return file_hash.hexdigest()
+
     def merge_dicts(self, dict1, dict2):
         res = {**dict1, **dict2}
         return res
@@ -55,9 +64,12 @@ class RulesHandler:
             idx_dict = json.load(f)
             f.close()
             for key, value in idx_dict.items():
+                rule_file = os.path.join(self.rules_path, value['filename'])
+                print(rule_file)
+                checksum = self.file_checksum(rule_file)
                 print(key)
                 print(value)
-                print(value['filename'])
+                print(value['filename'], checksum)
         else:
             self.debug.error('index cfg file not found: ' + cfg_file)
 

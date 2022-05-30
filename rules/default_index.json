@@ -1,10 +1,6 @@
 {
-    "checksum1": {
-        "filename": "filename1.json",
-        "active": truev
-    },
-    "checksum2": {
-        "filename": "filename2.json",
+    "492d9ca9536f891f7792e5775150e730": {
+        "filename": "package.json",
         "active": true
     }
 }
