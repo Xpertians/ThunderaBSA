@@ -1,7 +1,7 @@
 {
     "publisher": "publisher",
     "updated": "2022-05-29",
-    "package": "package name",
+    "package": "package name 1",
     "license": "GPL-2.0",
     "symbols": [
         "sym1",

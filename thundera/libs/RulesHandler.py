@@ -64,12 +64,20 @@ class RulesHandler:
             idx_dict = json.load(f)
             f.close()
             for key, value in idx_dict.items():
-                rule_file = os.path.join(self.rules_path, value['filename'])
-                print(rule_file)
-                checksum = self.file_checksum(rule_file)
-                print(key)
-                print(value)
-                print(value['filename'], checksum)
+                if bool(value['active']):
+                    rule_file = self.create_cfg_file(value['filename'])
+                    checksum = self.file_checksum(rule_file)
+                    if key == checksum:
+                        f = open(rule_file)
+                        rule_dict = json.load(f)
+                        f.close()
+                        self.rules[key] = rule_dict
+                    else:
+                        self.debug.error(
+                            'rule cfg checksum not match for file '
+                            + value['filename'])
+                        print(checksum)
+            print(self.rules)
         else:
             self.debug.error('index cfg file not found: ' + cfg_file)
 
@@ -80,7 +88,6 @@ class RulesHandler:
             ign_dict = json.load(f)
             f.close()
             for key, value in ign_dict.items():
-                print(key)
-                print(value)
+                self.ignore = value
         else:
             self.debug.error('index cfg file not found: ' + cfg_file)

@@ -1,0 +1,11 @@
+{
+    "publisher": "publisher",
+    "updated": "2022-05-29",
+    "package": "package name 2",
+    "license": "Apache-2.0",
+    "symbols": [
+        "sym1",
+        "sym2",
+        "sym3"
+    ]
+}
