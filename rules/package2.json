@@ -4,8 +4,8 @@
     "package": "package name 2",
     "license": "Apache-2.0",
     "symbols": [
-        "sym1",
         "sym2",
-        "sym3"
+        "sym3",
+        "sym4"
     ]
 }
