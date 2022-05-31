@@ -33,17 +33,21 @@ class Scanner:
         self.exfilelist = []
         self.procfiles = []
         self.enumerate_files(filelist)
+        symbols = []
         for filepath in self.filelist:
             fileHandler = FileHandler.FileHandler(
                 self.debug,
                 filepath)
             symbols = fileHandler.run_handler()
-            if type(symbols) == str:
-                symbols = []
             if symbols is None:
                 symbols = []
+            if isinstance(symbols, str):
+                if symbols.find(",")!=-1:
+                    symbols = symbols.split(',')
+                else:
+                    symbols = []
             if len(symbols) >= 1:
-                clean_symbols = filter(lambda i: i not in self.ignore, symbols)
+                symbols = list(filter(lambda i: i not in self.ignore, symbols))
                 self.procfiles.append(filepath)
                 basename = os.path.basename(filepath)
                 basename = os.path.splitext(basename)[0]
@@ -51,8 +55,7 @@ class Scanner:
                 print('file:', filepath)
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
-                print('clean_symbols:', len(clean_symbols))
-                print('clean_symbols:', clean_symbols)
+                print('clean_symbols:', symbols)
             else:
                 self.exfilelist.append(filepath)
         print("filelist:", len(self.filelist))
