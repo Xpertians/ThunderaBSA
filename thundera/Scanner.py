@@ -42,7 +42,7 @@ class Scanner:
             if symbols is None:
                 symbols = []
             if isinstance(symbols, str):
-                if symbols.find(",")!=-1:
+                if symbols.find(",") != -1:
                     symbols = symbols.split(',')
                 else:
                     symbols = []

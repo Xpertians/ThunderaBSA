@@ -28,7 +28,7 @@ class RulesHandler:
 
     def get_rules(self):
         return self.rules
-        
+
     def file_checksum(self, file_path):
         with open(file_path, "rb") as f:
             file_hash = hashlib.md5()
