@@ -43,6 +43,7 @@ class Scanner:
             if symbols is None:
                 symbols = []
             if len(symbols) >= 1:
+                clean_symbols = filter(lambda i: i not in self.ignore, symbols)
                 self.procfiles.append(filepath)
                 basename = os.path.basename(filepath)
                 basename = os.path.splitext(basename)[0]
@@ -50,6 +51,8 @@ class Scanner:
                 print('file:', filepath)
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
+                print('clean_symbols:', len(clean_symbols))
+                print('clean_symbols:', clean_symbols)
             else:
                 self.exfilelist.append(filepath)
         print("filelist:", len(self.filelist))
