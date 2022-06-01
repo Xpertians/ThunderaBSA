@@ -32,6 +32,7 @@ class Scanner:
         self.filelist = filelist
         self.exfilelist = []
         self.procfiles = []
+        self.report = {}
         self.enumerate_files(filelist)
         symbols = []
         for filepath in self.filelist:
@@ -46,6 +47,7 @@ class Scanner:
                     symbols = symbols.split(',')
                 else:
                     symbols = []
+            matches = []
             if len(symbols) >= 1:
                 symbols = list(filter(lambda i: i not in self.ignore, symbols))
                 self.procfiles.append(filepath)
@@ -56,8 +58,14 @@ class Scanner:
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
                 print('clean_symbols:', symbols)
+                for rule in self.rules:
+                    matches = list(filter(lambda i: i in self.rules[rule]['symbols'], symbols))
+                    if len(matches) >= 1:
+                        self.report[rule] = matches
+
             else:
                 self.exfilelist.append(filepath)
+        print('report:', self.report)
         print("filelist:", len(self.filelist))
         print("exfilelist:", len(self.exfilelist))
         print("procfiles:", len(self.procfiles))

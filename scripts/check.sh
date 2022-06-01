@@ -27,10 +27,10 @@ python3 setup.py install > logs/pip3install.log
 echo "Running Thundera WHL"
 #thundera ./testfiles/folder.zip --no-scan
 #rm -rf ./testfiles/folder/
-#thundera ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar.gz --no-scan
-#rm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tarrm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar
+thundera ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar.gz --no-scan
+rm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tarrm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar
 
-thundera ./testfiles/Prog.cpp --no-scan
+#thundera ./testfiles/Prog.cpp --no-scan
 #thundera --help
 #thundera /bin/
 
