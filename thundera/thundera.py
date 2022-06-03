@@ -22,19 +22,41 @@ filelist = []
     type=click.Path(exists=True)
 )
 @click.option(
-    '--scan/--no-scan',
+    '--scan',
+    is_flag=True,
+    show_default=True,
     default=False,
-    help='Number of greetings.')
-def cli(target, scan):
+    help='Extract Symbols ONLY')
+@click.option(
+    '--update',
+    is_flag=True,
+    show_default=False,
+    default=False,
+    help='Update Compliance Library (CL)')
+@click.option(
+    '--output',
+    default='report.json',
+    show_default=False,
+    help='Report file name')
+@click.option(
+    '--verbose',
+    is_flag=True,
+    show_default=False,
+    default=False,
+    help='Verbose')
+@click.option('--format',
+              type=click.Choice(['JSON', 'CSV'], case_sensitive=False))
+def cli(target, scan, update, output, verbose, format):
 
-    rv = sys.platform
-    if scan:
-        rv = rv.upper() + '!!!!111'
-    # click.echo(rv)
+    if update:
+        msg = "function not UPDATE available"
+        click.echo(msg)
+        print('ERR:', msg)
+        exit()
 
     """ Thundera BSA """
     print('*'*80)
-    print("* Thundera Binary Static Analysis (BSA)                                        *")
+    print("* Thundera <> Binary Static Analysis (BSA) *")
     print('*'*80)
     print('')
 
@@ -57,12 +79,12 @@ def cli(target, scan):
                 for aFile in cfs:
                     file_path = str(os.path.join(cdp, aFile))
                     self.filelist.append(file_path)
-            Scanner.Scanner(debug, filelist)
+            Scanner.Scanner(debug, scan, verbose, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning the file "+target
             print(eMSG)
             filelist.append(target)
-            Scanner.Scanner(debug, filelist)
+            Scanner.Scanner(debug, scan, verbose, filelist)
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)
@@ -72,7 +94,7 @@ def cli(target, scan):
             print(eMSG)
             print('')
     else:
-        eMSG = "Thundera BSA only supports POSIX based OS"
+        eMSG = "ThunderaBSA only supports POSIX based OS"
         debug.error(eMSG)
         print(eMSG)
         print('')

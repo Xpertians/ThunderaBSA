@@ -24,7 +24,7 @@ from thundera.libs import RulesHandler
 
 class Scanner:
 
-    def __init__(self, errorHandler, filelist):
+    def __init__(self, errorHandler, skipScan, verbose, filelist):
         self.rh = RulesHandler.RulesHandler(errorHandler)
         self.ignore = self.rh.get_ignore()
         self.rules = self.rh.get_rules()
@@ -58,13 +58,16 @@ class Scanner:
                 print('checksum:', fileHandler.exp_checksum())
                 print('symbols:', len(symbols))
                 print('clean_symbols:', symbols)
-                for rule in self.rules:
-                    matches = list(
-                        filter(
-                            lambda i: i in self.rules[rule]['symbols'],
-                            symbols))
-                    if len(matches) >= 1:
-                        self.report[rule] = matches
+                if not skipScan:
+                    for rule in self.rules:
+                        matches = list(
+                            filter(
+                                lambda i: i in self.rules[rule]['symbols'],
+                                symbols))
+                        if len(matches) >= 1:
+                            self.report[rule] = matches
+                else:
+                    print('skipping scan')
 
             else:
                 self.exfilelist.append(filepath)
