@@ -4,7 +4,6 @@ import sys
 import click
 import calendar
 import time
-import terminal_banner
 from shutil import which
 from pathlib import Path
 from thundera.libs import ErrorHandler
@@ -34,9 +33,9 @@ def cli(target, scan):
     # click.echo(rv)
 
     """ Thundera BSA """
-    banner_txt = "Thundera Binary Static Analysis (BSA)"
-    banner_obj = terminal_banner.Banner(banner_txt)
-    print(banner_obj)
+    print('*'*80)
+    print("* Thundera Binary Static Analysis (BSA)                                        *")
+    print('*'*80)
     print('')
 
     cmdlist = ["ctags", "readelf", "exiftool"]
