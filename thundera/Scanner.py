@@ -20,7 +20,7 @@ from concurrent.futures import ThreadPoolExecutor
 from thundera.libs import ErrorHandler
 from thundera.libs import FileHandler
 from thundera.libs import RulesHandler
-
+from thundera.libs import ReportBuilder
 
 class Scanner:
 
@@ -54,10 +54,10 @@ class Scanner:
                 basename = os.path.basename(filepath)
                 basename = os.path.splitext(basename)[0]
                 symbols.append(basename)
-                print('file:', filepath)
-                print('checksum:', fileHandler.exp_checksum())
-                print('symbols:', len(symbols))
-                print('clean_symbols:', symbols)
+                # print('file:', filepath)
+                # print('checksum:', fileHandler.exp_checksum())
+                # print('symbols:', len(symbols))
+                # print('clean_symbols:', symbols)
                 if not extract:
                     for rule in self.rules:
                         matches = list(
@@ -68,13 +68,18 @@ class Scanner:
                             self.report[rule] = matches
                 else:
                     print('skipping scan')
-
             else:
                 self.exfilelist.append(filepath)
-        print('report:', self.report)
-        print("filelist:", len(self.filelist))
-        print("exfilelist:", len(self.exfilelist))
-        print("procfiles:", len(self.procfiles))
+        if not extract:
+            report_type = 'MATCHES'
+            report_format = 'CSV'
+        else:
+            report_type = 'RULES'
+            report_format = 'JSON'
+        rp = ReportBuilder.ReportBuilder(report_type, report_format)
+        rp.summary(self.filelist, self.exfilelist, self.procfiles)
+
+        # print('matches:', self.report)
 
     def enumerate_files(self, filelist):
         sub_flist = []

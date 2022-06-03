@@ -29,10 +29,10 @@ echo "Running Thundera WHL"
 #rm -rf ./testfiles/folder/
 #thundera ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar.gz --no-scan
 #rm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tarrm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar
-thundera --scan ./testfiles/Prog.cpp
+thundera --extract ./testfiles/Prog.cpp
 thundera ./testfiles/Prog.cpp
 #thundera /bin/
-thundera --help
+#thundera --help
 
 echo "Deactivating Thundera ENV"
 deactivate

@@ -48,17 +48,17 @@ filelist = []
               type=click.Choice(['JSON', 'CSV'], case_sensitive=False))
 def cli(target, extract, update, output, verbose, format):
 
+    """ Thundera BSA """
+    print('*'*44)
+    print("* Thundera <> Binary Static Analysis (BSA) *")
+    print('*'*44)
+    print('')
+
     if update:
-        msg = "function not UPDATE available"
+        msg = "function UPDATE not available"
         click.echo(msg)
         print('ERR:', msg)
         exit()
-
-    """ Thundera BSA """
-    print('*'*80)
-    print("* Thundera <> Binary Static Analysis (BSA) *")
-    print('*'*80)
-    print('')
 
     cmdlist = ["ctags", "readelf", "exiftool"]
     for cmd in cmdlist:
@@ -73,7 +73,7 @@ def cli(target, extract, update, output, verbose, format):
         if target.endswith('/'):
             target = target[:-1]
         if os.path.isdir(target):
-            eMSG = "Scanning the folder "+target
+            eMSG = "Scanning folder "+target
             print(eMSG)
             for cdp, csb, cfs in os.walk(target):
                 for aFile in cfs:
@@ -81,7 +81,7 @@ def cli(target, extract, update, output, verbose, format):
                     self.filelist.append(file_path)
             Scanner.Scanner(debug, extract, verbose, filelist)
         elif os.path.isfile(target):
-            eMSG = "Scanning the file "+target
+            eMSG = "Scanning file "+target
             print(eMSG)
             filelist.append(target)
             Scanner.Scanner(debug, extract, verbose, filelist)
