@@ -201,7 +201,7 @@ class FileHandler:
             window = 5
             charslist = []
             printable = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-            printable = printable+"-_.1234567890!@$%&*"
+            printable = printable+"-_.1234567890"
             for character in data:
                 if character in printable:
                     charslist.append(character)
@@ -209,6 +209,8 @@ class FileHandler:
                 else:
                     if count >= window:
                         symbols.append(''.join(charslist[-count:]))
+                        # sym = ''.join(charslist[-count:]).replace(' ' , '=')
+                        # symbols.append(sym)
                         count = 0
             if count >= window:
                 symbols.append(''.join(charslist[-count:]))

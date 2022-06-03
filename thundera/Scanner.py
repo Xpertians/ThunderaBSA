@@ -59,7 +59,10 @@ class Scanner:
                 print('symbols:', len(symbols))
                 print('clean_symbols:', symbols)
                 for rule in self.rules:
-                    matches = list(filter(lambda i: i in self.rules[rule]['symbols'], symbols))
+                    matches = list(
+                        filter(
+                            lambda i: i in self.rules[rule]['symbols'],
+                            symbols))
                     if len(matches) >= 1:
                         self.report[rule] = matches
 
