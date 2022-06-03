@@ -22,7 +22,7 @@ filelist = []
     type=click.Path(exists=True)
 )
 @click.option(
-    '--scan',
+    '--extract',
     is_flag=True,
     show_default=True,
     default=False,
@@ -46,7 +46,7 @@ filelist = []
     help='Verbose')
 @click.option('--format',
               type=click.Choice(['JSON', 'CSV'], case_sensitive=False))
-def cli(target, scan, update, output, verbose, format):
+def cli(target, extract, update, output, verbose, format):
 
     if update:
         msg = "function not UPDATE available"
@@ -79,12 +79,12 @@ def cli(target, scan, update, output, verbose, format):
                 for aFile in cfs:
                     file_path = str(os.path.join(cdp, aFile))
                     self.filelist.append(file_path)
-            Scanner.Scanner(debug, scan, verbose, filelist)
+            Scanner.Scanner(debug, extract, verbose, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning the file "+target
             print(eMSG)
             filelist.append(target)
-            Scanner.Scanner(debug, scan, verbose, filelist)
+            Scanner.Scanner(debug, extract, verbose, filelist)
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)
