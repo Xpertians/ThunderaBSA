@@ -55,6 +55,13 @@ class ReportBuilder:
         print('')
 
     def print_rule(self, symbols):
+        for symbol in symbols:
+            if len(symbol) <= 2:
+                symbols.remove(symbol)
+            elif '.' in symbol:
+                new_sym = symbol.split('.')
+                symbols.append(new_sym[0])
+                symbols.remove(symbol)
         today = date.today()
         fdate = today.strftime("%Y-%m-%d")
         rule_json = {
