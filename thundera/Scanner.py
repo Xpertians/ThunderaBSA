@@ -22,6 +22,7 @@ from thundera.libs import FileHandler
 from thundera.libs import RulesHandler
 from thundera.libs import ReportBuilder
 
+
 class Scanner:
 
     def __init__(self, errorHandler, extract, verbose, filelist):
@@ -65,8 +66,8 @@ class Scanner:
                                 symbols))
                         if len(matches) >= 1:
                             hits = {
-                                'filepath' : filepath,
-                                'matches' : matches}
+                                'filepath': filepath,
+                                'matches': matches}
                             if rule in self.report:
                                 self.report[rule].append(hits)
                             else:

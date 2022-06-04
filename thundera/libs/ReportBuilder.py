@@ -35,7 +35,8 @@ class ReportBuilder:
         print('Files:')
         for checksum in self.files:
             taglabel = "["+checksum+"]:"
-            print(' ',
+            print(
+                ' ',
                 taglabel,
                 self.files[checksum]['filepath'],
                 len(self.files[checksum]['symbols']),
@@ -48,12 +49,9 @@ class ReportBuilder:
         for checksum in self.matches:
             package = self.rules[checksum]['package']
             license = self.rules[checksum]['license']
-            print(' ',
-                package,
-                '('+license+'):')
+            print(' ', package, '('+license+'):')
             for match in self.matches[checksum]:
                 print('  ', match)
-
         print('')
 
     def print_rule(self, symbols):
@@ -66,14 +64,14 @@ class ReportBuilder:
             "license": "<SPDX>",
             "symbols": symbols
         }
-        print("json:", rule_json)
-
+        json_object = json.dumps(rule_json, indent=4)
+        print(json_object)
 
     def add_rules(self, rules):
         self.rules = rules
 
     def add_file(self, checksum, filepath, symbols):
-        self.files[checksum] = {'filepath':filepath, 'symbols':symbols}
+        self.files[checksum] = {'filepath': filepath, 'symbols': symbols}
 
     def add_matches(self, matches):
         self.matches = matches
