@@ -27,7 +27,7 @@ python3 setup.py install > logs/pip3install.log
 echo "Running Thundera WHL"
 #thundera --extract ./testfiles/folder.zip
 #rm -rf ./testfiles/folder/
-thundera ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar.gz
+thundera --extract ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar.gz
 rm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tarrm -rf ./testfiles/KeplerPackage_linux_0.2_11-May-2022_1652283758.tar
 #thundera --extract ./testfiles/Prog.cpp
 #thundera ./testfiles/Prog.cpp
