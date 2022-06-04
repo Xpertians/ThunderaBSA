@@ -55,13 +55,14 @@ class Scanner:
                 else:
                     symbols = []
             matches = []
+            checksum = fileHandler.exp_checksum()
             if len(symbols) >= 1:
                 symbols = list(filter(lambda i: i not in self.ignore, symbols))
                 self.procfiles.append(filepath)
                 basename = os.path.basename(filepath)
                 basename = os.path.splitext(basename)[0]
                 symbols.append(basename)
-                self.rp.add_file(fileHandler.exp_checksum(), filepath, symbols)
+                self.rp.add_file(checksum, filepath, symbols)
                 if not extract:
                     for rule in self.rules:
                         matches = list(
@@ -69,12 +70,21 @@ class Scanner:
                                 lambda i: i in self.rules[rule]['symbols'],
                                 symbols))
                         if len(matches) >= 1:
-                            self.report[rule] = matches
+                            hits = {
+                                'filepath' : filepath,
+                                'matches' : matches}
+                            if rule in self.report:
+                                self.report[rule].append(hits)
+                            else:
+                                self.report[rule] = []
+                                self.report[rule].append(hits)
             else:
                 self.exfilelist.append(filepath)
+        self.rp.add_rules(self.rules)
+        self.rp.add_matches(self.report)
         self.rp.summary(self.filelist, self.exfilelist, self.procfiles)
         self.rp.print_files()
-        print('matches:', self.report)
+        self.rp.print_matches()
 
     def enumerate_files(self, filelist):
         sub_flist = []
@@ -117,6 +127,16 @@ class Scanner:
             'application/gzip',
             'application/zlib',
             'application/x-tar'
+            ]
+        if file_type in list_mimes:
+            return True
+        else:
+            return False
+
+    def is_excluded(self, file_type):
+        # This function needs improvement
+        list_mimes = [
+            'inode/symlink'
             ]
         if file_type in list_mimes:
             return True

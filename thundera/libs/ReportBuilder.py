@@ -19,6 +19,7 @@ class ReportBuilder:
         self.format = report_format
         self.files = {}
         self.matches = {}
+        self.rules = {}
 
     def summary(self, filelist, exfilelist, procfiles):
         print('')
@@ -33,17 +34,32 @@ class ReportBuilder:
         print('Files:')
         for checksum in self.files:
             taglabel = "["+checksum+"]:"
-            print(taglabel, self.files[checksum]['filepath'])
+            print(' ',
+                taglabel,
+                self.files[checksum]['filepath'],
+                len(self.files[checksum]['symbols']),
+                'symbols')
         print('')
 
+    def print_matches(self):
+        print('')
+        print('Matches:')
+        for checksum in self.matches:
+            package = self.rules[checksum]['package']
+            license = self.rules[checksum]['license']
+            print(' ',
+                package,
+                '('+license+'):')
+            for match in self.matches[checksum]:
+                print('  ', match)
+
+        print('')
+
+    def add_rules(self, rules):
+        self.rules = rules
+
     def add_file(self, checksum, filepath, symbols):
-        print('checksum:', checksum)
-        print('filepath:', filepath)
-        print('symbols:', symbols)
         self.files[checksum] = {'filepath':filepath, 'symbols':symbols}
 
-    def add_matches(self, checksum, filepath, symbols):
-        print('checksum:', checksum)
-        print('filepath:', filepath)
-        print('symbols:', symbols)
-        self.matches[checksum] = {'filepath':filepath, 'symbols':symbols}
+    def add_matches(self, matches):
+        self.matches = matches

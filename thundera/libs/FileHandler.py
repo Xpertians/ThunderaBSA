@@ -153,6 +153,7 @@ class FileHandler:
             'application/x-dosexec': self.handle_strings,
             'font/sfnt': self.handle_strings,
             'text/x-shellscript': self.handle_strings,
+            'application/x-executable': self.handle_strings,
 
             # Ignored mimetypes
             'text/plain': self.ignore,
@@ -177,7 +178,8 @@ class FileHandler:
             'audio/mpeg': self.ignore,
             'audio/x-wav': self.ignore,
             'video/mp4': self.ignore,
-            'inode/x-empty': self.ignore
+            'inode/x-empty': self.ignore,
+            'inode/symlink': self.ignore
         }
 
     def ignore(self, filepath, checksum):

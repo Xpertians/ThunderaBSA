@@ -78,7 +78,7 @@ def cli(target, extract, update, output, verbose, format):
             for cdp, csb, cfs in os.walk(target):
                 for aFile in cfs:
                     file_path = str(os.path.join(cdp, aFile))
-                    self.filelist.append(file_path)
+                    filelist.append(file_path)
             Scanner.Scanner(debug, extract, verbose, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning file "+target

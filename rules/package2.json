@@ -5,7 +5,7 @@
     "license": "Apache-2.0",
     "symbols": [
         "sym2",
-        "sym3",
-        "sym4"
+        "Array1",
+        "BubbleSort"
     ]
 }
