@@ -29,13 +29,7 @@ class Scanner:
         self.ignore = self.rh.get_ignore()
         self.rules = self.rh.get_rules()
         self.debug = errorHandler
-        if not extract:
-            report_type = 'MATCHES'
-            report_format = 'CSV'
-        else:
-            report_type = 'RULES'
-            report_format = 'JSON'
-        self.rp = ReportBuilder.ReportBuilder(report_type, report_format)
+        self.rp = ReportBuilder.ReportBuilder('JSON')
         self.filelist = filelist
         self.exfilelist = []
         self.procfiles = []
@@ -83,8 +77,11 @@ class Scanner:
         self.rp.add_rules(self.rules)
         self.rp.add_matches(self.report)
         self.rp.summary(self.filelist, self.exfilelist, self.procfiles)
-        self.rp.print_files()
-        self.rp.print_matches()
+        if not extract:
+            self.rp.print_files()
+            self.rp.print_matches()
+        else:
+            self.rp.print_rule(symbols)
 
     def enumerate_files(self, filelist):
         sub_flist = []

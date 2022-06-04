@@ -11,11 +11,12 @@ import sys
 import mmap
 import json
 import string
+from datetime import date
+
 
 class ReportBuilder:
 
-    def __init__(self, report_type, report_format):
-        self.type = report_type
+    def __init__(self, report_format):
         self.format = report_format
         self.files = {}
         self.matches = {}
@@ -54,6 +55,19 @@ class ReportBuilder:
                 print('  ', match)
 
         print('')
+
+    def print_rule(self, symbols):
+        today = date.today()
+        fdate = today.strftime("%Y-%m-%d")
+        rule_json = {
+            "publisher": "<PUBLISHER>",
+            "updated": fdate,
+            "package": "<PACKAGE_NAME>",
+            "license": "<SPDX>",
+            "symbols": symbols
+        }
+        print("json:", rule_json)
+
 
     def add_rules(self, rules):
         self.rules = rules
