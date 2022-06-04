@@ -29,6 +29,13 @@ class Scanner:
         self.ignore = self.rh.get_ignore()
         self.rules = self.rh.get_rules()
         self.debug = errorHandler
+        if not extract:
+            report_type = 'MATCHES'
+            report_format = 'CSV'
+        else:
+            report_type = 'RULES'
+            report_format = 'JSON'
+        self.rp = ReportBuilder.ReportBuilder(report_type, report_format)
         self.filelist = filelist
         self.exfilelist = []
         self.procfiles = []
@@ -54,10 +61,7 @@ class Scanner:
                 basename = os.path.basename(filepath)
                 basename = os.path.splitext(basename)[0]
                 symbols.append(basename)
-                # print('file:', filepath)
-                # print('checksum:', fileHandler.exp_checksum())
-                # print('symbols:', len(symbols))
-                # print('clean_symbols:', symbols)
+                self.rp.add_file(fileHandler.exp_checksum(), filepath, symbols)
                 if not extract:
                     for rule in self.rules:
                         matches = list(
@@ -66,20 +70,11 @@ class Scanner:
                                 symbols))
                         if len(matches) >= 1:
                             self.report[rule] = matches
-                else:
-                    print('skipping scan')
             else:
                 self.exfilelist.append(filepath)
-        if not extract:
-            report_type = 'MATCHES'
-            report_format = 'CSV'
-        else:
-            report_type = 'RULES'
-            report_format = 'JSON'
-        rp = ReportBuilder.ReportBuilder(report_type, report_format)
-        rp.summary(self.filelist, self.exfilelist, self.procfiles)
-
-        # print('matches:', self.report)
+        self.rp.summary(self.filelist, self.exfilelist, self.procfiles)
+        self.rp.print_files()
+        print('matches:', self.report)
 
     def enumerate_files(self, filelist):
         sub_flist = []
