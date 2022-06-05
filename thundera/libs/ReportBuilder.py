@@ -47,12 +47,15 @@ class ReportBuilder:
     def print_matches(self):
         print('')
         print('Matches:')
-        for checksum in self.matches:
-            package = self.rules[checksum]['package']
-            license = self.rules[checksum]['license']
-            print(' ', package, '('+license+'):')
-            for match in self.matches[checksum]:
-                print('  ', match)
+        if len(self.matches) >=1:
+            for checksum in self.matches:
+                package = self.rules[checksum]['package']
+                license = self.rules[checksum]['license']
+                print(' ', package, '('+license+'):')
+                for match in self.matches[checksum]:
+                    print('  ', match)
+        else:
+            print(' ', 'No matches')
         print('')
 
     def print_rule(self, symbols):
