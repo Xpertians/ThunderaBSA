@@ -30,13 +30,17 @@ class RulesHandler:
         return self.rules
 
     def file_checksum(self, file_path):
-        with open(file_path, "rb") as f:
-            file_hash = hashlib.md5()
-            chunk = f.read(8192)
-            while chunk:
-                file_hash.update(chunk)
+        if os.path.isfile(file_path):
+            with open(file_path, "rb") as f:
+                file_hash = hashlib.md5()
                 chunk = f.read(8192)
-        return file_hash.hexdigest()
+                while chunk:
+                    file_hash.update(chunk)
+                    chunk = f.read(8192)
+            checksum = file_hash.hexdigest()
+        else:
+            checksum = ''
+        return checksum
 
     def merge_dicts(self, dict1, dict2):
         res = {**dict1, **dict2}

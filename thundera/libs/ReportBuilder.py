@@ -11,6 +11,7 @@ import sys
 import mmap
 import json
 import string
+import io
 from datetime import date
 
 
@@ -72,7 +73,13 @@ class ReportBuilder:
             "symbols": symbols
         }
         json_object = json.dumps(rule_json, indent=4)
-        print(json_object)
+        with io.open('outpost-rules.json', 'w', encoding='utf-8') as f:
+            f.write(json_object)
+        checksum = self.get_checksum('outpost-rules.json')
+        filename = checksum+'-rules.json'
+        os.rename('outpost-rules.json', filename)
+        print('Rules:')
+        print(' ','Rule file created:', filename)
 
     def add_rules(self, rules):
         self.rules = rules
@@ -82,3 +89,12 @@ class ReportBuilder:
 
     def add_matches(self, matches):
         self.matches = matches
+
+    def get_checksum(self, filepath):
+        with open(filepath, "rb") as f:
+            file_hash = hashlib.md5()
+            chunk = f.read(8192)
+            while chunk:
+                file_hash.update(chunk)
+                chunk = f.read(8192)
+        return file_hash.hexdigest()
