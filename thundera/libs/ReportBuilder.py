@@ -52,20 +52,24 @@ class ReportBuilder:
                 package = self.rules[checksum]['package']
                 license = self.rules[checksum]['license']
                 print(' ', package, '('+license+'):')
-                for match in self.matches[checksum]:
-                    print('  ', match)
+                if len(self.matches[checksum])<=10:
+                    for match in self.matches[checksum]:
+                        print('  ', match)
+                else:
+                    print('  ','over', len(self.matches[checksum]),'matches')
         else:
             print(' ', 'No matches')
         print('')
 
     def print_rule(self, symbols):
+        cleanSyms = []
         for symbol in symbols:
-            if len(symbol) <= 2:
-                symbols.remove(symbol)
-            elif '.' in symbol:
+            symbol.strip()
+            if '.' in symbol:
                 new_sym = symbol.split('.')
-                symbols.append(new_sym[0])
-                symbols.remove(symbol)
+                symbol = new_sym[0]
+            if len(symbol) >= 2:
+                cleanSyms.append(symbol)
         today = date.today()
         fdate = today.strftime("%Y-%m-%d")
         rule_json = {
@@ -73,7 +77,7 @@ class ReportBuilder:
             "updated": fdate,
             "package": "<PACKAGE_NAME>",
             "license": "<SPDX>",
-            "symbols": symbols
+            "symbols": cleanSyms
         }
         json_object = json.dumps(rule_json, indent=4)
         with io.open('outpost-rules.json', 'w', encoding='utf-8') as f:

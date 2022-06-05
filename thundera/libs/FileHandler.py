@@ -153,10 +153,13 @@ class FileHandler:
             'application/x-dosexec': self.handle_strings,
             'font/sfnt': self.handle_strings,
             'text/x-shellscript': self.handle_strings,
+            'text/x-msdos-batch': self.handle_strings,
             'application/x-executable': self.handle_strings,
+            'application/x-java-applet': self.handle_strings,
 
             # Ignored mimetypes
             'text/plain': self.ignore,
+            'application/pdf': self.ignore,
             'text/html': self.ignore,
             'application/x-ms-pdb': self.ignore,
             'image/vnd.microsoft.icon': self.ignore,
