@@ -79,7 +79,7 @@ class ReportBuilder:
         filename = checksum+'-rules.json'
         os.rename('outpost-rules.json', filename)
         print('Rules:')
-        print(' ','Rule file created:', filename)
+        print(' ', 'Rule file created:', filename)
 
     def add_rules(self, rules):
         self.rules = rules
