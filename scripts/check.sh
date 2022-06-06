@@ -34,7 +34,7 @@ echo "Running Thundera WHL"
 #thundera ./testfiles/testfolder/
 #thundera /bin/
 #thundera --help
-thundera ./testfiles/packages/lottie-android-master/
+thundera ./testfiles/packages/avro-master/
 
 echo "Deactivating Thundera ENV"
 deactivate

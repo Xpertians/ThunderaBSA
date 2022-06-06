@@ -7,8 +7,12 @@
         "filename": "package2.json",
         "active": true
     },
-    "ac396d48db0dccc8cb121a2ab55cf63d": {
+    "5c7a60f80e811b83f2c8204664225f12": {
         "filename": "airbnb-lottie-android.json",
+        "active": true
+    },
+    "8f27dd0db2317847ee9371fcf42884f0": {
+        "filename": "apache-avro.json",
         "active": true
     }
 }

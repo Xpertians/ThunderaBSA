@@ -159,6 +159,10 @@ class FileHandler:
 
             # Ignored mimetypes
             'text/plain': self.ignore,
+            'application/x-java-keystore': self.ignore,
+            'text/x-php': self.ignore,
+            'text/x-asm': self.ignore,
+            'text/x-pascal': self.ignore,
             'application/pdf': self.ignore,
             'text/html': self.ignore,
             'application/x-ms-pdb': self.ignore,
