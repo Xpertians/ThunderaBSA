@@ -28,6 +28,11 @@ filelist = []
     default=False,
     help='Extract Symbols ONLY')
 @click.option(
+    '--filter',
+    'filter',
+    show_default=False,
+    help='Rules filter string')
+@click.option(
     '--update',
     is_flag=True,
     show_default=False,
@@ -46,13 +51,18 @@ filelist = []
     help='Verbose')
 @click.option('--format',
               type=click.Choice(['JSON', 'CSV'], case_sensitive=False))
-def cli(target, extract, update, output, verbose, format):
+def cli(target, extract, filter, update, output, verbose, format):
 
     """ Thundera BSA """
     print('*'*44)
     print("* Thundera <> Binary Static Analysis (BSA) *")
     print('*'*44)
     print('')
+
+    if filter:
+        filter_str = str(filter)
+    else:
+        filter_str = ''
 
     if update:
         msg = "function UPDATE not available"
@@ -79,12 +89,12 @@ def cli(target, extract, update, output, verbose, format):
                 for aFile in cfs:
                     file_path = str(os.path.join(cdp, aFile))
                     filelist.append(file_path)
-            Scanner.Scanner(debug, extract, verbose, filelist)
+            Scanner.Scanner(debug, extract, filter_str, verbose, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning file "+target
             print(eMSG)
             filelist.append(target)
-            Scanner.Scanner(debug, extract, verbose, filelist)
+            Scanner.Scanner(debug, extract, filter_str, verbose, filelist)
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)

@@ -25,7 +25,7 @@ from thundera.libs import ReportBuilder
 
 class Scanner:
 
-    def __init__(self, errorHandler, extract, verbose, filelist):
+    def __init__(self, errorHandler, extract, filter_str, verbose, filelist):
         self.rh = RulesHandler.RulesHandler(errorHandler)
         self.ignore = self.rh.get_ignore()
         self.rules = self.rh.get_rules()
@@ -86,7 +86,7 @@ class Scanner:
             # self.rp.print_files()
             self.rp.print_matches()
         else:
-            self.rp.print_rule(self.gsym)
+            self.rp.print_rule(self.gsym, filter_str)
 
     def enumerate_files(self, filelist):
         sub_flist = []

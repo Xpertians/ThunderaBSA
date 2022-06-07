@@ -61,7 +61,7 @@ class ReportBuilder:
             print(' ', 'No matches')
         print('')
 
-    def print_rule(self, symbols):
+    def print_rule(self, symbols, filter_str):
         cleanSyms = []
         for symbol in symbols:
             symbol.strip()
@@ -77,7 +77,8 @@ class ReportBuilder:
             "updated": fdate,
             "package": "<PACKAGE_NAME>",
             "license": "<SPDX>",
-            "symbols": cleanSyms
+            "symbols": cleanSyms,
+            "filter": filter_str
         }
         json_object = json.dumps(rule_json, indent=4)
         with io.open('outpost-rules.json', 'w', encoding='utf-8') as f:
