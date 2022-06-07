@@ -69,7 +69,12 @@ class ReportBuilder:
                 new_sym = symbol.split('.')
                 symbol = new_sym[0]
             if len(symbol) >= 2:
-                cleanSyms.append(symbol)
+                if len(filter_str) <= 1:
+                    cleanSyms.append(symbol)
+                else:
+                    if re.search(filter_str, symbol, flags=re.IGNORECASE):
+                        cleanSyms.append(symbol)
+
         today = date.today()
         fdate = today.strftime("%Y-%m-%d")
         rule_json = {
