@@ -82,8 +82,7 @@ class ReportBuilder:
             "updated": fdate,
             "package": "<PACKAGE_NAME>",
             "license": "<SPDX>",
-            "symbols": cleanSyms,
-            "filter": filter_str
+            "symbols": cleanSyms
         }
         json_object = json.dumps(rule_json, indent=4)
         with io.open('outpost-rules.json', 'w', encoding='utf-8') as f:
