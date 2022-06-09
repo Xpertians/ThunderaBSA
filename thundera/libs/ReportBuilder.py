@@ -100,8 +100,10 @@ class ReportBuilder:
                 'license': self.rules[checksum]['license'],
                 'matches': self.matches[checksum]
             }
-        # self.export_matches_json(mreport)
-        self.export_matches_csv(mreport)
+        if self.format.upper() == 'JSON':
+            self.export_matches_json(mreport)
+        else:
+            self.export_matches_csv(mreport)
 
     def export_rule(self, symbols, filter_str):
         cleanSyms = []
