@@ -83,10 +83,9 @@ class Scanner:
         self.rp.add_matches(self.report)
         self.rp.summary(self.filelist, self.exfilelist, self.procfiles)
         if not extract:
-            # self.rp.print_files()
             self.rp.print_matches()
         else:
-            self.rp.print_rule(self.gsym, filter_str)
+            self.rp.export_rule(self.gsym, filter_str)
 
     def enumerate_files(self, filelist):
         sub_flist = []

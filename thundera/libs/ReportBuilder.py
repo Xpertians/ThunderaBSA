@@ -52,18 +52,22 @@ class ReportBuilder:
                 package = self.rules[checksum]['package']
                 license = self.rules[checksum]['license']
                 print(' ', package, '('+license+'):')
-                for match in self.matches[checksum]:
-                    print('  ', json.dumps(match, indent = 4))
-                #if len(self.matches[checksum]) <= 10:
-                #    for match in self.matches[checksum]:
-                #        print('  ', match)
-                #else:
-                #    print('  ', 'over', len(self.matches[checksum]), 'matches')
+                self.export_matches(self.matches, checksum)
+                if len(self.matches[checksum]) <= 10:
+                    for match in self.matches[checksum]:
+                        print('  ', match)
+                else:
+                    print('  ', 'over', len(self.matches[checksum]), 'matches')
         else:
             print(' ', 'No matches')
         print('')
 
-    def print_rule(self, symbols, filter_str):
+    def export_matches(self, matches, checksum):
+        print('format:', self.format)
+        #for match in matches[checksum]:
+            #print('  ', json.dumps(match, indent = 4))
+
+    def export_rule(self, symbols, filter_str):
         cleanSyms = []
         for symbol in symbols:
             symbol.strip()
