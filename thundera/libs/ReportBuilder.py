@@ -52,7 +52,7 @@ class ReportBuilder:
                 package = self.rules[checksum]['package']
                 license = self.rules[checksum]['license']
                 print(' ', package, '('+license+'):')
-                self.export_matches(self.matches, checksum)
+                self.export_matches()
                 if len(self.matches[checksum]) <= 10:
                     for match in self.matches[checksum]:
                         print('  ', match)
@@ -62,10 +62,46 @@ class ReportBuilder:
             print(' ', 'No matches')
         print('')
 
-    def export_matches(self, matches, checksum):
-        print('format:', self.format)
-        #for match in matches[checksum]:
-            #print('  ', json.dumps(match, indent = 4))
+    def export_matches_csv(self, csv_data):
+        fname = './thundera-matches.csv'
+        csv_columns = ['Rule','Package','License', 'File', 'Matches']
+        try:
+            writer = csv.writer(
+                open(fname,"w"),
+                delimiter=',',
+                quoting=csv.QUOTE_ALL)
+            writer.writerow(csv_columns)
+            for rule_id in csv_data:
+                for match in csv_data[rule_id]['matches']:
+                    row = [
+                        rule_id,
+                        csv_data[rule_id]['package'],
+                        csv_data[rule_id]['license'],
+                        match['filepath'],
+                        ",".join(match['matches'])
+                    ]
+                    writer.writerow(row)
+        except IOError:
+            print("I/O error")
+
+    def export_matches_json(self, json_data):
+        fname = './thundera-matches.json'
+        json_object = json.dumps(json_data, indent=4)
+        with io.open(fname, 'w', encoding='utf-8') as f:
+            f.write(json_object)
+
+    def export_matches(self):
+        mreport = {}
+        for checksum in self.matches:
+            package = self.rules[checksum]['package']
+            license = self.rules[checksum]['license']
+            mreport[checksum] = {
+                'package': self.rules[checksum]['package'],
+                'license': self.rules[checksum]['license'],
+                'matches': self.matches[checksum]
+            }
+        # self.export_matches_json(mreport)
+        self.export_matches_csv(mreport)
 
     def export_rule(self, symbols, filter_str):
         cleanSyms = []
@@ -91,11 +127,12 @@ class ReportBuilder:
             "symbols": cleanSyms
         }
         json_object = json.dumps(rule_json, indent=4)
-        with io.open('outpost-rules.json', 'w', encoding='utf-8') as f:
+        fname = 'outpost-rules.json'
+        with io.open(fname, 'w', encoding='utf-8') as f:
             f.write(json_object)
-        checksum = self.get_checksum('outpost-rules.json')
+        checksum = self.get_checksum(fname)
         filename = checksum+'-rules.json'
-        os.rename('outpost-rules.json', filename)
+        os.rename(fname, filename)
         print('Rules:')
         print(' ', 'Rule file created:', filename)
 
