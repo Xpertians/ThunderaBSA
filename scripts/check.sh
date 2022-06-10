@@ -34,8 +34,8 @@ echo "Running Thundera WHL"
 #thundera --extract ./testfiles/Prog.cpp
 #thundera ./testfiles/testfolder/
 #thundera /bin/
-#thundera --help
-thundera ./testfiles/packages/avro-master/ --format CSV
+thundera --help
+thundera --extract ./testfiles/packages/avro-master/
 
 echo "Deactivating Thundera ENV"
 deactivate
