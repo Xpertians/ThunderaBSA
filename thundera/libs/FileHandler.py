@@ -159,6 +159,7 @@ class FileHandler:
 
             # Ignored mimetypes
             'text/plain': self.ignore,
+            'text/troff': self.ignore,
             'application/x-setupscript': self.ignore,
             'application/x-java-keystore': self.ignore,
             'text/x-php': self.ignore,
