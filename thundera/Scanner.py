@@ -36,6 +36,8 @@ class Scanner:
         self.procfiles = []
         self.report = {}
         self.enumerate_files(filelist)
+        print(filelist)
+        exit()
         symbols = []
         self.gsym = []
         for filepath in self.filelist:
@@ -90,6 +92,8 @@ class Scanner:
     def enumerate_files(self, filelist):
         sub_flist = []
         for file in filelist:
+            if 'tar.gz' in file:
+                print('detected:', file)
             if os.path.islink(file):
                 self.exfilelist.append(file)
                 self.filelist.remove(file)
@@ -106,7 +110,10 @@ class Scanner:
                     elif zipfile.is_zipfile(file):
                         with ZipFile(file, 'r') as zip_ref:
                             zip_ref.extractall(new_dir)
-                            self.filelist.remove(file)
+                            if file in self.filelist:
+                                self.filelist.remove(file)
+                            else:
+                                print('file not listed:', file)
                     else:
                         self.debug.error("Missing Handler for:", filetype)
                         self.debug.error(">", file)

@@ -165,6 +165,7 @@ class FileHandler:
             'text/x-pascal': self.ignore,
             'application/pdf': self.ignore,
             'text/html': self.ignore,
+            'image/x-ms-bmp': self.ignore,
             'application/x-ms-pdb': self.ignore,
             'image/vnd.microsoft.icon': self.ignore,
             'text/xml': self.ignore,
