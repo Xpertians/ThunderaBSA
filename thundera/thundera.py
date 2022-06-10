@@ -58,7 +58,7 @@ def cli(target, extract, filter, update, output, format):
     else:
         filter_str = ''
 
-    if self.format.upper() == 'CSV':
+    if format.upper() == 'CSV':
         format = 'CSV'
     else:
         format = 'JSON'
