@@ -35,9 +35,7 @@ class Scanner:
         self.exfilelist = []
         self.procfiles = []
         self.report = {}
-        self.enumerate_files(filelist)
-        print(filelist)
-        exit()
+        self.enumerate_files(filelist, 0)
         symbols = []
         self.gsym = []
         for filepath in self.filelist:
@@ -89,11 +87,9 @@ class Scanner:
         else:
             self.rp.export_rule(self.gsym, filter_str)
 
-    def enumerate_files(self, filelist):
+    def enumerate_files(self, filelist, loop):
         sub_flist = []
         for file in filelist:
-            if 'tar.gz' in file:
-                print('detected:', file)
             if os.path.islink(file):
                 self.exfilelist.append(file)
                 self.filelist.remove(file)
@@ -123,8 +119,8 @@ class Scanner:
                             filetype = mime.from_file(file_path)
                             self.filelist.append(file_path)
                             if self.is_archive(filetype):
-                                sub_flist.append(file_path)
-                                self.enumerate_files(sub_flist)
+                                self.filelist.append(file_path)
+                                self.enumerate_files(self.filelist, (loop+1))
 
     def is_archive(self, file_type):
         # This function needs improvement
