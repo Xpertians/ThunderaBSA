@@ -35,7 +35,7 @@ echo "Running Thundera WHL"
 #thundera ./testfiles/testfolder/
 #thundera /bin/
 #thundera --help
-thundera ./testfiles/packages/avro-master/
+thundera ./testfiles/packages/avro-master/ --format CSV
 
 echo "Deactivating Thundera ENV"
 deactivate

@@ -52,12 +52,12 @@ class ReportBuilder:
                 package = self.rules[checksum]['package']
                 license = self.rules[checksum]['license']
                 print(' ', package, '('+license+'):')
-                self.export_matches()
                 if len(self.matches[checksum]) <= 10:
                     for match in self.matches[checksum]:
                         print('  ', match)
                 else:
                     print('  ', 'over', len(self.matches[checksum]), 'matches')
+                self.export_matches()
         else:
             print(' ', 'No matches')
         print('')
@@ -83,12 +83,16 @@ class ReportBuilder:
                     writer.writerow(row)
         except IOError:
             print("I/O error")
+        print('')
+        print(' ', 'Report (CSV):', fname)
 
     def export_matches_json(self, json_data):
         fname = './thundera-matches.json'
         json_object = json.dumps(json_data, indent=4)
         with io.open(fname, 'w', encoding='utf-8') as f:
             f.write(json_object)
+        print('')
+        print(' ', 'Report (JSON):', fname)
 
     def export_matches(self):
         mreport = {}
