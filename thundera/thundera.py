@@ -58,11 +58,14 @@ def cli(target, extract, filter, update, output, format):
     else:
         filter_str = ''
 
-    if format.upper() == 'CSV':
-        format = 'CSV'
+    if format:
+        if format.upper() == 'CSV':
+            format = 'CSV'
+        else:
+            format = 'JSON'
     else:
         format = 'JSON'
-
+        
     if update:
         msg = "function UPDATE not available"
         click.echo(msg)
