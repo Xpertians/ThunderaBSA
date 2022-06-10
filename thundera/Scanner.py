@@ -25,12 +25,12 @@ from thundera.libs import ReportBuilder
 
 class Scanner:
 
-    def __init__(self, errorHandler, extract, filter_str, verbose, filelist):
+    def __init__(self, errorHandler, extract, filter_str, format, filelist):
         self.rh = RulesHandler.RulesHandler(errorHandler)
         self.ignore = self.rh.get_ignore()
         self.rules = self.rh.get_rules()
         self.debug = errorHandler
-        self.rp = ReportBuilder.ReportBuilder('JSON')
+        self.rp = ReportBuilder.ReportBuilder(format)
         self.filelist = filelist
         self.exfilelist = []
         self.procfiles = []

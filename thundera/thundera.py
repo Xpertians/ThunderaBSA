@@ -43,15 +43,9 @@ filelist = []
     default='report.json',
     show_default=False,
     help='Report file name')
-@click.option(
-    '--verbose',
-    is_flag=True,
-    show_default=False,
-    default=False,
-    help='Verbose')
 @click.option('--format',
               type=click.Choice(['JSON', 'CSV'], case_sensitive=False))
-def cli(target, extract, filter, update, output, verbose, format):
+def cli(target, extract, filter, update, output, format):
 
     """ Thundera BSA """
     print('*'*44)
@@ -63,6 +57,11 @@ def cli(target, extract, filter, update, output, verbose, format):
         filter_str = str(filter)
     else:
         filter_str = ''
+
+    if self.format.upper() == 'CSV':
+        format = 'CSV'
+    else:
+        format = 'JSON'
 
     if update:
         msg = "function UPDATE not available"
@@ -89,12 +88,12 @@ def cli(target, extract, filter, update, output, verbose, format):
                 for aFile in cfs:
                     file_path = str(os.path.join(cdp, aFile))
                     filelist.append(file_path)
-            Scanner.Scanner(debug, extract, filter_str, verbose, filelist)
+            Scanner.Scanner(debug, extract, filter_str, format, filelist)
         elif os.path.isfile(target):
             eMSG = "Scanning file "+target
             print(eMSG)
             filelist.append(target)
-            Scanner.Scanner(debug, extract, filter_str, verbose, filelist)
+            Scanner.Scanner(debug, extract, filter_str, format, filelist)
         else:
             debug.info('*** Target Path: %s' % target)
             debug.info('*** Working Directory: %s' % workdir)
