@@ -218,8 +218,6 @@ class FileHandler:
                 else:
                     if count >= window:
                         symbols.append(''.join(charslist[-count:]))
-                        # sym = ''.join(charslist[-count:]).replace(' ' , '=')
-                        # symbols.append(sym)
                         count = 0
             if count >= window:
                 symbols.append(''.join(charslist[-count:]))

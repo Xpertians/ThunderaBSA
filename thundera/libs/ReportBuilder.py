@@ -57,7 +57,7 @@ class ReportBuilder:
                         print('  ', match)
                 else:
                     print('  ', 'over', len(self.matches[checksum]), 'matches')
-                self.export_matches()
+            self.export_matches()
         else:
             print(' ', 'No matches')
         print('')
