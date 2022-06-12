@@ -15,6 +15,10 @@
         "filename": "apache-commons.json",
         "active": true
     },
+    "65e04a72e440fc4153b0cc3f4e8bbed3": {
+        "filename": "apache-solr.json",
+        "active": true
+    },
     "bdfb88f37dfdf8a37efc9da9a9d45698": {
         "filename": "apache-httpcore.json",
         "active": true
