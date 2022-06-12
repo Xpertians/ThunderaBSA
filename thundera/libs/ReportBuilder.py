@@ -111,7 +111,7 @@ class ReportBuilder:
 
     def export_rule(self, symbols, filter_str):
         cleanSyms = []
-        for symbol in symbols:
+        for symbol in set(symbols):
             symbol.strip()
             if '.' in symbol:
                 new_sym = symbol.split('.')

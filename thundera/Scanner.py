@@ -98,25 +98,43 @@ class Scanner:
                 mime = magic.Magic(mime=True)
                 filetype = mime.from_file(file)
                 if self.is_archive(filetype):
+                    # print('is_archive:', file)
                     new_dir = os.path.splitext(file)[0]
                     if os.path.isfile(new_dir):
                         new_dir = new_dir + '_tmp'
                     if tarfile.is_tarfile(file):
+                        # print('tarfile:', file)
                         self.filelist.remove(file)
                         file = tarfile.open(file)
                         file.extractall(new_dir)
                         file.close()
                     elif filetype in 'application/zip':
+                        # print('zip:', file)
                         with ZipFile(file, 'r') as zip_ref:
                             zip_ref.extractall(new_dir)
                             if file in self.filelist:
                                 self.filelist.remove(file)
                             else:
                                 self.debug.error(" file not listed:" + file)
+                    elif filetype in 'application/gzip':
+                        # print('gzip:', file)
+                        # Pending Implementation
+                        if file in self.filelist:
+                            self.filelist.remove(file)
+                        else:
+                            self.debug.error(" file not listed:" + file)
+                    elif filetype in 'application/x-bzip2':
+                        # print('bunzip2:', file)
+                        # Pending Implementation
+                        if file in self.filelist:
+                            self.filelist.remove(file)
+                        else:
+                            self.debug.error(" file not listed:" + file)
                     else:
-                        self.debug.error("Missing Handler for:" + filetype)
+                        # print('else:', file)
+                        self.debug.error("Missing Archive Handler for:" + filetype)
                         self.debug.error(" > " + file)
-                        self.debug.error(" loop:" + loop)
+                        self.debug.error(" loop:" + str(loop))
                     for cdp, csb, cfs in os.walk(new_dir):
                         for aFile in cfs:
                             file_path = str(os.path.join(cdp, aFile))
@@ -134,7 +152,8 @@ class Scanner:
             'application/java-archive',
             'application/gzip',
             'application/zlib',
-            'application/x-tar'
+            'application/x-tar',
+            'application/x-bzip2'
             ]
         if file_type in list_mimes:
             return True

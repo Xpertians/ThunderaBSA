@@ -19,8 +19,20 @@
         "filename": "apache-solr.json",
         "active": true
     },
+    "c7db841a832b27efda6699dee5ec8fd3": {
+        "filename": "apache-lucene.json",
+        "active": true
+    },
     "bdfb88f37dfdf8a37efc9da9a9d45698": {
         "filename": "apache-httpcore.json",
+        "active": true
+    },
+    "bab06a53f2465ee6dc056c818013ba6c": {
+        "filename": "boltsframework-bolts-android.json",
+        "active": true
+    },
+    "87ab9e846483c431e91f1ae8b33fb7a6": {
+        "filename": "facebook-android-sdk.json",
         "active": true
     }
 }

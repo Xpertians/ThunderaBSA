@@ -160,6 +160,8 @@ class FileHandler:
             'application/x-java-applet': self.handle_strings,
 
             # Ignored mimetypes
+            'application/gzip': self.ignore, # needs dedupe
+            'application/zip': self.ignore, # needs dedupe
             'text/plain': self.ignore,
             'application/x-dbt': self.ignore,
             'application/x-dosdriver': self.ignore,
