@@ -152,6 +152,7 @@ class FileHandler:
             'application/octet-stream': self.handle_strings,
             'application/x-dosexec': self.handle_strings,
             'font/sfnt': self.handle_strings,
+            'application/javascript': self.handle_strings,
             'text/x-shellscript': self.handle_strings,
             'text/x-msdos-batch': self.handle_strings,
             'application/x-executable': self.handle_strings,
@@ -159,6 +160,7 @@ class FileHandler:
 
             # Ignored mimetypes
             'text/plain': self.ignore,
+            'application/x-git': self.ignore,
             'text/troff': self.ignore,
             'application/x-setupscript': self.ignore,
             'application/x-java-keystore': self.ignore,

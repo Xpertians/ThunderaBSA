@@ -111,8 +111,8 @@ class Scanner:
                             else:
                                 print('file not listed:', file)
                     else:
-                        self.debug.error("Missing Handler for:", filetype)
-                        self.debug.error(">", file)
+                        self.debug.error("Missing Handler for:" + filetype)
+                        self.debug.error(">" + file)
                     for cdp, csb, cfs in os.walk(new_dir):
                         for aFile in cfs:
                             file_path = str(os.path.join(cdp, aFile))
