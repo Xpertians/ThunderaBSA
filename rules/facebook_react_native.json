@@ -1,0 +1,25 @@
+{
+  "name": "Facebook React Native",
+  "description": "A framework for building native apps with React.",
+  "Notes": "Depend on GNU-STL and other LGPL components",
+  "author": "Facebook",
+  "homepage": "https://github.com/facebook/react-native",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://github.com/facebook/react-native/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "facebook",
+    "react",
+    "mobile"
+  ],
+  "symbols": [
+    "com.facebook.react",
+    "com.facebook.soloader",
+    "com.facebook.systrace",
+    "com.facebook.jni",
+    "com.facebook.quicklog"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Google J2ObjC Annotations",
+  "description": "A set of annotations that provide additional information to the J2ObjC translator to modify the result of translation.",
+  "Notes": "",
+  "author": "Google",
+  "homepage": "https://github.com/google/j2objc/",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/google/j2objc/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "google",
+    "annotations",
+    "j2objc"
+  ],
+  "symbols": [
+    "com.google.j2objc"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Netty project",
+  "description": "An event-driven asynchronous network application framework",
+  "Notes": "",
+  "author": "Netty",
+  "homepage": "https://github.com/netty/netty",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/netty/netty/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "Netty",
+    "java"
+  ],
+  "symbols": [
+    "io.netty"
+  ]
+}

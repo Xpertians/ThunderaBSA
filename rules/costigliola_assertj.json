@@ -1,0 +1,20 @@
+{
+  "name": "AssertJ - Fluent assertions for java",
+  "description": "AssertJ is a library providing easy to use rich typed assertions.",
+  "Notes": "",
+  "author": "Joel Costigliola",
+  "homepage": "https://github.com/joel-costigliola/assertj-core",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/joel-costigliola/assertj-core/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "assertions",
+    "AssertJ"
+  ],
+  "symbols": [
+    "org.assertj.core"
+  ]
+}

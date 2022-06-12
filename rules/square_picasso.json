@@ -1,0 +1,20 @@
+{
+  "name": "Square Picasso",
+  "description": "A powerful image downloading and caching library for Android.",
+  "Notes": "",
+  "author": "Square",
+  "homepage": "https://github.com/square/picasso",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/square/picasso/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "Square",
+    "api"
+  ],
+  "symbols": [
+    "com.squareup.picasso"
+  ]
+}

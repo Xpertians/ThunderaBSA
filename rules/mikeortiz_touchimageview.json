@@ -1,0 +1,20 @@
+{
+  "name": "TouchImageView",
+  "description": "TouchImageView extends ImageView and supports all of ImageViews functionality.",
+  "Notes": "",
+  "author": "MikeOrtiz",
+  "homepage": "https://github.com/MikeOrtiz/TouchImageView",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://github.com/MikeOrtiz/TouchImageView/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "touchimageview",
+    "titouchimageview"
+  ],
+  "symbols": [
+    "com.ortiz.touch"
+  ]
+}

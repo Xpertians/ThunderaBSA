@@ -1,0 +1,20 @@
+{
+  "name": "Square Okio",
+  "description": "A modern I/O API for Java.",
+  "Notes": "",
+  "author": "Square",
+  "homepage": "https://github.com/square/okio",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/square/okio/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "Square",
+    "api"
+  ],
+  "symbols": [
+    "okio."
+  ]
+}

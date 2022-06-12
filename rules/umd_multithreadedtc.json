@@ -1,0 +1,21 @@
+{
+  "name": "MultithreadedTC framework",
+  "description": "The MultithreadedTC framework was created to make it easier to test small concurrent abstractions. It enables test designers to guarantee a specific interleaving of two or more threads, even in the presence of blocking and timing issues.",
+  "Notes": "",
+  "author": "University of Maryland",
+  "homepage": "https://code.google.com/archive/p/multithreadedtc/",
+  "license": {
+    "spdx": "BSD-3-Clause",
+    "type": "permissive",
+    "url": "https://code.google.com/archive/p/multithreadedtc/"
+  },
+  "language": "java",
+  "keywords": [
+    "test",
+    "framework",
+    "multithreadedtc"
+  ],
+  "symbols": [
+    "edu.umd.cs"
+  ]
+}

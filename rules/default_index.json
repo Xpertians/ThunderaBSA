@@ -1,17 +1,9 @@
 {
-    "e9992f124ec918d2293eabe724186514": {
-        "filename": "package1.json",
-        "active": true
-    },
-    "ce2d5cdce1f8058a6de3f5164e6c7f67": {
-        "filename": "package2.json",
-        "active": true
-    },
-    "5c7a60f80e811b83f2c8204664225f12": {
+    "9e5dfd0b0718cd44ae3f818e82c620c7": {
         "filename": "airbnb-lottie-android.json",
         "active": true
     },
-    "8f27dd0db2317847ee9371fcf42884f0": {
+    "1c635f3435ab630fd6ea8ffa00269f47": {
         "filename": "apache-avro.json",
         "active": true
     }

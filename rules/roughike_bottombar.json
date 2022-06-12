@@ -1,0 +1,20 @@
+{
+  "name": "Roughike BottomBar",
+  "description": "A custom view component that mimics the new Material Design Bottom Navigation pattern.",
+  "Notes": "The package has been deprecated",
+  "author": "roughike",
+  "homepage": "https://github.com/roughike/BottomBar",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/roughike/BottomBar/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "material",
+    "design"
+  ],
+  "symbols": [
+    "com.roughike.bottombar"
+  ]
+}

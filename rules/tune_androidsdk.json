@@ -1,0 +1,21 @@
+{
+  "name": "Tune MobileAppTracking Library",
+  "description": "The MobileAppTracking SDK code is released under the LGPL-3.0 license. For alternative licensing options, please contact TUNE, Inc.",
+  "Notes": "",
+  "author": "BranchMetrics",
+  "homepage": "https://github.com/BranchMetrics/sdk-release",
+  "license": {
+    "spdx": "LGPL-3.0 or Propietary",
+    "type": "copyleft",
+    "url": "https://github.com/BranchMetrics/sdk-release/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "tune",
+    "analytics",
+    "BranchMetrics"
+  ],
+  "symbols": [
+    "com.tune"
+  ]
+}

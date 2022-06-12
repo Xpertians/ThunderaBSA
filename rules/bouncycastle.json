@@ -1,0 +1,20 @@
+{
+  "name": "Bouncy Castle Crypto",
+  "description": "Bouncy Castle Crypto APIs.",
+  "Notes": "",
+  "author": "Legion of the Bouncy Castle Inc",
+  "homepage": "https://github.com/apache/commons-lang",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/apache/commons-lang/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "crypto",
+    "bouncycastle"
+  ],
+  "symbols": [
+    "org.bouncycastle."
+  ]
+}

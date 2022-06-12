@@ -1,0 +1,21 @@
+{
+  "name": "Bolts for Android",
+  "description": "Bolts is a collection of low-level libraries designed to make developing mobile apps easier.",
+  "Notes": "",
+  "author": "BoltsFramework",
+  "homepage": "https://github.com/BoltsFramework/Bolts-Android",
+  "license": {
+    "spdx": "MIT",
+    "type": "Permissive",
+    "url": "https://github.com/BoltsFramework/Bolts-Android/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "BoltsFramework",
+    "speech",
+    "algorithm"
+  ],
+  "symbols": [
+    "bolts."
+  ]
+}

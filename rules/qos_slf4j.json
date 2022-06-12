@@ -1,0 +1,21 @@
+{
+  "name": "SLF4J",
+  "description": "Simple Logging Facade for Java (SLF4J).",
+  "Notes": "",
+  "author": "QOS.ch",
+  "homepage": "https://www.slf4j.org",
+  "license": {
+    "spdx": "MIT",
+    "type": "Permissive",
+    "url": "https://www.slf4j.org/license.html"
+  },
+  "language": "java",
+  "keywords": [
+    "slf4j",
+    "log4j",
+    "logging"
+  ],
+  "symbols": [
+    "org.slf4j"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Spongy Castle",
+  "description": "Spongy Castle - a repackage of Bouncy Castle for Android (which ships a crippled version of BC).",
+  "Notes": "The package has been deprecated",
+  "author": "rtyley",
+  "homepage": "https://rtyley.github.io/spongycastle/",
+  "license": {
+    "spdx": "MIT",
+    "type": "Permissive",
+    "url": "https://github.com/rtyley/spongycastle/blob/spongy-master/LICENSE.html"
+  },
+  "language": "java",
+  "keywords": [
+    "rtyley",
+    "security"
+  ],
+  "symbols": [
+    "org.spongycastle"
+  ]
+}

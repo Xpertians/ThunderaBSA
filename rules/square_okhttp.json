@@ -1,0 +1,22 @@
+{
+  "name": "Square OkHttp",
+  "description": "An HTTP & HTTP/2 client for Android and Java applications.",
+  "Notes": "",
+  "author": "Square",
+  "homepage": "http://square.github.io/okhttp/",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/square/okhttp/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "Square",
+    "http",
+    "client"
+  ],
+  "symbols": [
+    "com.squareup.okhttp",
+    "okhttp3"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Google Ads Library",
+  "description": "Google Ads API Client Library for Java",
+  "Notes": "Source code is under Apache-2.0, but service is linked to propietary Terms of Services",
+  "author": "Google",
+  "homepage": "https://github.com/googleads/google-ads-java",
+  "license": {
+    "spdx": "Apache-2.0+Propietary",
+    "type": "custom",
+    "url": "https://github.com/googleads/google-ads-java/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "google",
+    "ads"
+  ],
+  "symbols": [
+    "com.google.ads"
+  ]
+}

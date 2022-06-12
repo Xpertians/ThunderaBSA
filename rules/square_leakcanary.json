@@ -1,0 +1,20 @@
+{
+  "name": "Square LeakCanary",
+  "description": "A memory leak detection library for Android.",
+  "Notes": "",
+  "author": "Square",
+  "homepage": "https://github.com/square/leakcanary",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/square/leakcanary/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "Square",
+    "LeakCanary"
+  ],
+  "symbols": [
+    "com.squareup.leakcanary"
+  ]
+}

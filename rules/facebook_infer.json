@@ -1,0 +1,21 @@
+{
+  "name": "Facebook Infer",
+  "description": "A static analyzer for Java, C, C++, and Objective-C.",
+  "Notes": "",
+  "author": "Facebook",
+  "homepage": "https://github.com/facebook/infer",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://github.com/facebook/infer/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "facebook",
+    "yoga",
+    "mobile"
+  ],
+  "symbols": [
+    "com.facebook.infer"
+  ]
+}

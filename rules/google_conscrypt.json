@@ -1,0 +1,20 @@
+{
+  "name": "Google Conscrypt",
+  "description": "Conscrypt is a Java Security Provider that implements parts of the Java Cryptography Extension and Java Secure Socket Extension.",
+  "Notes": "",
+  "author": "Google",
+  "homepage": "https://github.com/google/conscrypt",
+  "license": {
+      "spdx": "Apache-2.0",
+      "type": "permissive",
+      "url": "https://github.com/google/conscrypt/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "google",
+    "cryptography"
+  ],
+  "symbols": [
+    "org.conscrypt"
+  ]
+}

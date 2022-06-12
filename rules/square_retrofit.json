@@ -1,0 +1,21 @@
+{
+  "name": "Square Retrofit",
+  "description": "A type-safe HTTP client for Android and Java.",
+  "Notes": "",
+  "author": "Square",
+  "homepage": "https://github.com/square/retrofit",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/square/retrofit/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "Square",
+    "http",
+    "client"
+  ],
+  "symbols": [
+    "retrofit2."
+  ]
+}

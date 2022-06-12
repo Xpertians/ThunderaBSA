@@ -1,0 +1,41 @@
+{
+  "name": "Open Source Kotlin Core",
+  "description": "The Kotlin Programming Language",
+  "Notes": "",
+  "author": "JetBrains",
+  "homepage": "http://kotlinlang.org/",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/JetBrains/kotlin/blob/master/license/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "java",
+    "core",
+    "kotlin"
+  ],
+  "symbols": [
+    "kotlin.ExceptionsKt",
+    "kotlin.ExceptionsKt__ExceptionsKt",
+    "kotlin.InitializedLazyImpl",
+    "kotlin.KotlinNullPointerException",
+    "kotlin.Lazy",
+    "kotlin.Pair",
+    "kotlin.SynchronizedLazyImpl",
+    "kotlin.TuplesKt",
+    "kotlin.TypeCastException",
+    "kotlin.UNINITIALIZED_VALUE",
+    "kotlin.UninitializedPropertyAccessException",
+    "kotlin.collections",
+    "kotlin.comparisons",
+    "kotlin.internal",
+    "kotlin.jvm",
+    "kotlin.ranges",
+    "kotlin.reflect",
+    "kotlin.sequences",
+    "kotlin.text",
+    "kotlin.Metadata",
+    "kotlin.Unit"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Netinsight Sye Tools",
+  "description": "Tools for installing and managing a Sye Backend",
+  "Notes": "Source code is under MIT, but service is linked to propietary Terms of Services",
+  "author": "Netinsight",
+  "homepage": "https://github.com/netinsight/sye-tools",
+  "license": {
+    "spdx": "MIT+Propietary",
+    "type": "custom",
+    "url": "https://github.com/netinsight/sye-tools/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "netinsight",
+    "sye-tools"
+  ],
+  "symbols": [
+    "com.netinsight.sye"
+  ]
+}

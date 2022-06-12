@@ -1,0 +1,20 @@
+{
+  "name": "Google Protobuf Library",
+  "description": "Core Protocol Buffers library. Protocol Buffers are a way of encoding structured data in an efficient yet extensible format.",
+  "Notes": "",
+  "author": "Google",
+  "homepage": "https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java",
+  "license": {
+    "spdx": "BSD-3-Clause",
+    "type": "permissive",
+    "url": "https://mvnrepository.com/artifact/com.google.protobuf/protobuf-java"
+  },
+  "language": "java",
+  "keywords": [
+    "google",
+    "protobuf"
+  ],
+  "symbols": [
+    "com.google.protobuf"
+  ]
+}

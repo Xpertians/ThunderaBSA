@@ -1,0 +1,23 @@
+{
+  "name": "MIT Kerberos libraries",
+  "description": "Java Kerberos and Security Libraries",
+  "Notes": "Usually other libraries act as a wrapper for this library, also is included in JRE7+ by default",
+  "author": "MIT",
+  "homepage": "https://github.com/krb5/krb5",
+  "license": {
+    "spdx": "BSD-2-Clause",
+    "type": "permissive",
+    "url": "https://github.com/krb5/krb5/blob/master/NOTICE"
+  },
+  "language": "java",
+  "keywords": [
+    "security",
+    "kerberos",
+    "jre",
+    "mit",
+    "oracle"
+  ],
+  "symbols": [
+    "org.ietf.jgss"
+  ]
+}

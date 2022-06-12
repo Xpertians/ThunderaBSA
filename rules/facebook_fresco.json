@@ -1,0 +1,27 @@
+{
+  "name": "Facebook Fresco",
+  "description": "An Android library for managing images and the memory they use.",
+  "Notes": "",
+  "author": "Facebook",
+  "homepage": "https://github.com/facebook/fresco",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://github.com/facebook/fresco/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "facebook",
+    "imageutils",
+    "pipeline",
+    "drawee"
+  ],
+  "symbols": [
+    "com.facebook.drawable",
+    "com.facebook.drawee",
+    "com.facebook.fbui",
+    "com.facebook.imageformat",
+    "com.facebook.imagepipeline",
+    "com.facebook.imageutils"
+  ]
+}

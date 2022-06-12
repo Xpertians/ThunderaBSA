@@ -1,0 +1,20 @@
+{
+  "name": "Joda Convert",
+  "description": "Java library to enable conversion to and from standard string formats.",
+  "Notes": "",
+  "author": "JodaORG",
+  "homepage": "https://github.com/JodaOrg/joda-convert",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/JodaOrg/joda-convert/blob/master/LICENSE.txt"
+  },
+  "language": "java",
+  "keywords": [
+    "joda",
+    "converter"
+  ],
+  "symbols": [
+    "org.joda"
+  ]
+}

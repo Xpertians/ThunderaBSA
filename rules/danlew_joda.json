@@ -1,0 +1,20 @@
+{
+  "name": "Joda-Time library",
+  "description": "Joda-Time library with Android specialization.",
+  "Notes": "",
+  "author": "Daniel Lew",
+  "homepage": "https://github.com/dlew/joda-time-android",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/dlew/joda-time-android/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "joda",
+    "time"
+  ],
+  "symbols": [
+    "net.danlew.android"
+  ]
+}

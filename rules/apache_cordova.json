@@ -1,0 +1,21 @@
+{
+  "name": "Apache Cordova",
+  "description": "Cordova wraps your HTML/JavaScript app into a native container which can access the device functions of several platforms.",
+  "Notes": "",
+  "author": "Apache",
+  "homepage": "https://cordova.apache.org",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "Permissive",
+    "url": "https://github.com/apache/cordova-android/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "apache",
+    "cordova",
+    "mobile"
+  ],
+  "symbols": [
+    "org.apache.cordova"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Google GSON Library",
+  "description": "A Java serialization/deserialization library to convert Java Objects into JSON and back.",
+  "Notes": "",
+  "author": "Google",
+  "homepage": "https://github.com/google/gson",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/google/gson/blob/master/LICENSE"
+  },
+  "language": "java",
+  "keywords": [
+    "google",
+    "gson",
+    "json"
+  ],
+  "symbols": [
+    "com.google.gson"
+  ]
+}
