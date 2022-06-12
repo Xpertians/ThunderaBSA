@@ -130,6 +130,13 @@ class Scanner:
                             self.filelist.remove(file)
                         else:
                             self.debug.error(" file not listed:" + file)
+                    elif filetype in 'application/java-archive':
+                        # print('bunzip2:', file)
+                        # Pending Implementation
+                        if file in self.filelist:
+                            self.filelist.remove(file)
+                        else:
+                            self.debug.error(" file not listed:" + file)
                     else:
                         # print('else:', file)
                         self.debug.error("Missing Archive Handler for:" + filetype)

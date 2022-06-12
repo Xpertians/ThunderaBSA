@@ -162,6 +162,11 @@ class FileHandler:
             # Ignored mimetypes
             'application/gzip': self.ignore, # needs dedupe
             'application/zip': self.ignore, # needs dedupe
+            'application/java-archive': self.ignore, # needs dedupe
+            'application/x-pgp-keyring': self.ignore,
+            'application/pgp-keys': self.ignore,
+            'message/rfc822': self.ignore,
+            'application/x-stargallery-thm': self.ignore,
             'text/plain': self.ignore,
             'application/x-dbt': self.ignore,
             'application/x-dosdriver': self.ignore,

@@ -34,5 +34,9 @@
     "87ab9e846483c431e91f1ae8b33fb7a6": {
         "filename": "facebook-android-sdk.json",
         "active": true
+    },
+    "5aeb3e57e197108c4c1fa28b996021ca": {
+        "filename": "bouncycastle.json",
+        "active": true
     }
 }
