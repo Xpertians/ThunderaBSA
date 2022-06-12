@@ -22,3 +22,26 @@ If you are not able to find universal-ctags, please install the package from sou
 ## Development
 ### Libraries
 pip3 install twine setuptools wheel pycodestyle pyinstaller virtualenv
+
+
+elif filetype in 'application/gzip':
+    print('gzip:', file)
+    if os.path.isdir(new_dir):
+        shutil.rmtree(new_dir)
+    if os.path.isfile(new_dir):
+        new_dir = new_dir + '_tmp'
+    os.mkdir(new_dir)
+    print('new_dir:', new_dir)
+    new_base = os.path.basename(file).replace(".gz", "")
+    new_file = os.path.join(new_dir, new_base)
+    print('newfile:', new_file)
+    if os.path.isfile(new_file):
+        os.remove(new_file)
+    #with gzip.open(file, 'rb') as f_in:
+    #    with open(new_file, 'wb') as f_out:
+    #        shutil.copyfileobj(f_in, f_out)
+    self.filelist.append(new_file)
+    if file in self.filelist:
+        self.filelist.remove(file)
+    else:
+        self.debug.error(" file not listed:" + file)

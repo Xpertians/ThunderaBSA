@@ -155,11 +155,16 @@ class FileHandler:
             'application/javascript': self.handle_strings,
             'text/x-shellscript': self.handle_strings,
             'text/x-msdos-batch': self.handle_strings,
+            'text/x-diff': self.handle_strings,
             'application/x-executable': self.handle_strings,
             'application/x-java-applet': self.handle_strings,
 
             # Ignored mimetypes
             'text/plain': self.ignore,
+            'application/x-dbt': self.ignore,
+            'application/x-dosdriver': self.ignore,
+            'application/vnd.ms-excel': self.ignore,
+            'application/x-font-sfn': self.ignore,
             'application/x-git': self.ignore,
             'text/troff': self.ignore,
             'application/x-setupscript': self.ignore,

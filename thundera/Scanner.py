@@ -13,6 +13,7 @@ import json
 import string
 import tarfile
 import zipfile
+import shutil
 from slugify import slugify
 from zipfile import ZipFile
 from pathlib import Path
@@ -98,21 +99,24 @@ class Scanner:
                 filetype = mime.from_file(file)
                 if self.is_archive(filetype):
                     new_dir = os.path.splitext(file)[0]
+                    if os.path.isfile(new_dir):
+                        new_dir = new_dir + '_tmp'
                     if tarfile.is_tarfile(file):
                         self.filelist.remove(file)
                         file = tarfile.open(file)
                         file.extractall(new_dir)
                         file.close()
-                    elif zipfile.is_zipfile(file):
+                    elif filetype in 'application/zip':
                         with ZipFile(file, 'r') as zip_ref:
                             zip_ref.extractall(new_dir)
                             if file in self.filelist:
                                 self.filelist.remove(file)
                             else:
-                                print('file not listed:', file)
+                                self.debug.error(" file not listed:" + file)
                     else:
                         self.debug.error("Missing Handler for:" + filetype)
-                        self.debug.error(">" + file)
+                        self.debug.error(" > " + file)
+                        self.debug.error(" loop:" + loop)
                     for cdp, csb, cfs in os.walk(new_dir):
                         for aFile in cfs:
                             file_path = str(os.path.join(cdp, aFile))
