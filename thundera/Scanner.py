@@ -40,46 +40,49 @@ class Scanner:
         symbols = []
         self.gsym = []
         for filepath in self.filelist:
-            fileHandler = FileHandler.FileHandler(
-                self.debug,
-                filepath)
-            symbols = fileHandler.run_handler()
-            if symbols is None:
-                symbols = []
-            if isinstance(symbols, str):
-                if symbols.find(",") != -1:
-                    symbols = symbols.split(',')
-                else:
-                    symbols = []
-            matches = []
-            checksum = fileHandler.exp_checksum()
-            if len(symbols) >= 1:
-                symbols = list(filter(lambda i: i not in self.ignore, symbols))
-                self.procfiles.append(filepath)
-                basename = os.path.basename(filepath)
-                basename = os.path.splitext(basename)[0]
-                symbols.append(basename)
-                self.rp.add_file(checksum, filepath, symbols)
-                if not extract:
-                    for rule in self.rules:
-                        matches = list(
-                            filter(
-                                lambda i: i in self.rules[rule]['symbols'],
-                                symbols))
-                        if len(matches) >= 1:
-                            hits = {
-                                'filepath': filepath,
-                                'matches': matches}
-                            if rule in self.report:
-                                self.report[rule].append(hits)
-                            else:
-                                self.report[rule] = []
-                                self.report[rule].append(hits)
-                else:
-                    for symbol in symbols:
-                        self.gsym.append(symbol)
-            else:
+            if os.path.islink(filepath):
                 self.exfilelist.append(filepath)
+            else:
+                fileHandler = FileHandler.FileHandler(
+                    self.debug,
+                    filepath)
+                symbols = fileHandler.run_handler()
+                if symbols is None:
+                    symbols = []
+                if isinstance(symbols, str):
+                    if symbols.find(",") != -1:
+                        symbols = symbols.split(',')
+                    else:
+                        symbols = []
+                matches = []
+                checksum = fileHandler.exp_checksum()
+                if len(symbols) >= 1:
+                    symbols = list(filter(lambda i: i not in self.ignore, symbols))
+                    self.procfiles.append(filepath)
+                    basename = os.path.basename(filepath)
+                    basename = os.path.splitext(basename)[0]
+                    symbols.append(basename)
+                    self.rp.add_file(checksum, filepath, symbols)
+                    if not extract:
+                        for rule in self.rules:
+                            matches = list(
+                                filter(
+                                    lambda i: i in self.rules[rule]['symbols'],
+                                    symbols))
+                            if len(matches) >= 1:
+                                hits = {
+                                    'filepath': filepath,
+                                    'matches': matches}
+                                if rule in self.report:
+                                    self.report[rule].append(hits)
+                                else:
+                                    self.report[rule] = []
+                                    self.report[rule].append(hits)
+                    else:
+                        for symbol in symbols:
+                            self.gsym.append(symbol)
+                else:
+                    self.exfilelist.append(filepath)
         self.rp.add_rules(self.rules)
         self.rp.add_matches(self.report)
         self.rp.summary(self.filelist, self.exfilelist, self.procfiles)
@@ -96,7 +99,16 @@ class Scanner:
                 self.filelist.remove(file)
             else:
                 mime = magic.Magic(mime=True)
-                filetype = mime.from_file(file)
+                filetype = ''
+                try:
+                    filetype = mime.from_file(file)
+                except (IOError, OSError) as e:
+                    self.exfilelist.append(file)
+                    self.filelist.remove(file)
+                    if e.errno == errno.ENOENT:
+                        print('symlink doesnt exist:', file)
+                    else:
+                        raise e
                 if self.is_archive(filetype):
                     # print('is_archive:', file)
                     new_dir = os.path.splitext(file)[0]
@@ -125,6 +137,13 @@ class Scanner:
                             self.debug.error(" file not listed:" + file)
                     elif filetype in 'application/x-bzip2':
                         # print('bunzip2:', file)
+                        # Pending Implementation
+                        if file in self.filelist:
+                            self.filelist.remove(file)
+                        else:
+                            self.debug.error(" file not listed:" + file)
+                    elif filetype in 'application/x-xz':
+                        # print('xz:', file)
                         # Pending Implementation
                         if file in self.filelist:
                             self.filelist.remove(file)
@@ -160,7 +179,8 @@ class Scanner:
             'application/gzip',
             'application/zlib',
             'application/x-tar',
-            'application/x-bzip2'
+            'application/x-bzip2',
+            'application/x-xz'
             ]
         if file_type in list_mimes:
             return True

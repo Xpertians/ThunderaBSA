@@ -38,5 +38,33 @@
     "5aeb3e57e197108c4c1fa28b996021ca": {
         "filename": "bouncycastle.json",
         "active": true
+    },
+    "c581f62bfa828aee0c6dab1448327e89": {
+        "filename": "bumptech-glide.json",
+        "active": true
+    },
+    "8eef1b69d4a2338bddc5e5728ff816a0": {
+        "filename": "chrisbanes-photoview.json",
+        "active": true
+    },
+    "cb40500534416c3b3cc99cf26bd60b4b": {
+        "filename": "comscore-android-sdk.json",
+        "active": true
+    },
+    "e33099eca3ba293cee374d7023b989cd": {
+        "filename": "costigliola-assertj.json",
+        "active": true
+    },
+    "565711b3044410091f1dd141ef13ad2c": {
+        "filename": "danlew-joda.json",
+        "active": true
+    },
+    "e0aa16f9af3424d117a7942af15b1b39": {
+        "filename": "facebook-fresco.json",
+        "active": true
+    },
+    "5782bfc3febe23f0e9389796c2758b10": {
+        "filename": "facebook-infer.json",
+        "active": true
     }
 }

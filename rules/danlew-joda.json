@@ -1,0 +1,31 @@
+{
+    "publisher": "Daniel Lew",
+    "updated": "2022-06-12",
+    "package": "Joda-Time library",
+    "license": "Apache-2.0",
+    "symbols": [
+        "mOldDefaultJodaTz",
+        "JodaSampleActivity",
+        "jodaDateUtils",
+        "jodaJodaTimeAndroid",
+        "joda_keep",
+        "jodaResUtils",
+        "JodaSampleActivity",
+        "JodaTimeAndroid",
+        "jodasample",
+        "jodaTzDataPlugin",
+        "jodaTzDataPluginExtension",
+        "jodaTimeZoneChangedReceiver",
+        "gjoda",
+        "jodaResourceZoneInfoProvider",
+        "qjoda",
+        "mDefaultJodaTz",
+        "jodaCompileTzDataTask",
+        "21_FGjoda",
+        "activity_joda_sample",
+        "JodaTimeInitializer",
+        "jodatest",
+        "jodaJodaTimeInitializer",
+        "joda"
+    ]
+}

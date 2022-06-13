@@ -162,12 +162,15 @@ class FileHandler:
             # Ignored mimetypes
             'application/gzip': self.ignore, # needs dedupe
             'application/zip': self.ignore, # needs dedupe
+            'application/x-xz': self.ignore, # needs dedupe
             'application/java-archive': self.ignore, # needs dedupe
             'application/x-pgp-keyring': self.ignore,
             'application/pgp-keys': self.ignore,
+            'text/x-m4': self.ignore,
             'message/rfc822': self.ignore,
             'application/x-stargallery-thm': self.ignore,
             'text/plain': self.ignore,
+            'image/bmp': self.ignore,
             'application/x-dbt': self.ignore,
             'application/x-dosdriver': self.ignore,
             'application/vnd.ms-excel': self.ignore,
@@ -250,7 +253,10 @@ class FileHandler:
 
     def get_mime(self, filepath):
         mime = magic.Magic(mime=True)
-        return mime.from_file(filepath)
+        if os.path.islink(filepath):
+            return 'text/plain'
+        else:
+            return mime.from_file(filepath)
 
     def get_checksum(self, filepath):
         with open(filepath, "rb") as f:
