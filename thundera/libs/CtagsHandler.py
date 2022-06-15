@@ -28,10 +28,10 @@ class CtagsHandler:
         (result, error) = process.communicate()
         rc = process.wait()
         process.stdout.close()
-        for line in result.decode('utf-8').splitlines():
+        for line in result.splitlines():
             cols = line.split()
             if len(cols) >= 2:
                 if len(cols[0]) >= 5:
-                    self.symlst.append(cols[0])
+                    self.symlst.append(str(cols[0]))
         self.symlst = sorted(set(self.symlst))
         return ','.join(self.symlst)
