@@ -167,6 +167,7 @@ class FileHandler:
             'application/x-pgp-keyring': self.ignore,
             'application/pgp-keys': self.ignore,
             'text/x-m4': self.ignore,
+            'text/x-awk': self.ignore,
             'message/rfc822': self.ignore,
             'application/x-stargallery-thm': self.ignore,
             'text/plain': self.ignore,

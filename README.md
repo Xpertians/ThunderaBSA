@@ -45,3 +45,6 @@ elif filetype in 'application/gzip':
         self.filelist.remove(file)
     else:
         self.debug.error(" file not listed:" + file)
+
+
+application/zlib
