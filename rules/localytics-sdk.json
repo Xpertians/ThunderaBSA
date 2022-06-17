@@ -1,0 +1,11 @@
+{
+    "publisher": "Localytics",
+    "updated": "2022-06-16",
+    "package": "Localytics Android SDK",
+    "license": "OSS-CommercialToS",
+    "symbols": [
+      "localytics.android",
+      "localytics",
+      "android"
+    ]
+}

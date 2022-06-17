@@ -2,7 +2,7 @@
     "publisher": "Comscore",
     "updated": "2022-06-12",
     "package": "Comscore Analytics SDK",
-    "license": "Propietary",
+    "license": "OSS-CommercialToS",
     "symbols": [
         "comscore",
         "COMSCORE_VENDOR_INDEX",
