@@ -48,3 +48,4 @@ elif filetype in 'application/gzip':
 
 
 application/zlib
+text/x-lisp

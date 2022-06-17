@@ -1,0 +1,11 @@
+{
+    "publisher": "JakeWharton",
+    "updated": "2022-06-16",
+    "package": "ButterKnife Project",
+    "license": "Apache-2.0",
+    "symbols": [
+        "butterknife",
+        "butterknifeProcessors",
+        "ButterKnifeTest"
+    ]
+}

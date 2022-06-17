@@ -11,6 +11,7 @@
       "opengl",
       "dalvik",
       "libcore",
-      "xmlpull"
+      "xmlpull",
+      "OASP"
     ]
 }

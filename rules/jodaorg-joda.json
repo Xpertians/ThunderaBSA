@@ -1,0 +1,10 @@
+{
+    "publisher": "JodaORG",
+    "updated": "2022-06-16",
+    "package": "Joda Convert",
+    "license": "Apache-2.0",
+    "symbols": [
+      "org.joda",
+      "joda"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "publisher": "JetBrains",
+    "updated": "2022-06-16",
+    "package": "Open Source Kotlin Core",
+    "license": "Apache-2.0",
+    "symbols": [
+      "kotlin.ExceptionsKt",
+      "kotlin.ExceptionsKt__ExceptionsKt",
+      "kotlin.InitializedLazyImpl",
+      "kotlin.KotlinNullPointerException",
+      "kotlin.Lazy",
+      "kotlin.Pair",
+      "kotlin.SynchronizedLazyImpl",
+      "kotlin.TuplesKt",
+      "kotlin.TypeCastException",
+      "kotlin.UNINITIALIZED_VALUE",
+      "kotlin.UninitializedPropertyAccessException",
+      "kotlin.collections",
+      "kotlin.comparisons",
+      "kotlin.internal",
+      "kotlin.jvm",
+      "kotlin.ranges",
+      "kotlin.reflect",
+      "kotlin.sequences",
+      "kotlin.text",
+      "kotlin.Metadata",
+      "kotlin.Unit",
+      "kotlin"
+    ]
+}

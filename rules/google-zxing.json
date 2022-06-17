@@ -1,0 +1,11 @@
+{
+    "publisher": "Google",
+    "updated": "2022-06-16",
+    "package": "ZXing barcode scanner",
+    "license": "Apache-2.0",
+    "symbols": [
+        "zxing",
+        "zxingiconsmall",
+        "zxing-icon"
+    ]
+}

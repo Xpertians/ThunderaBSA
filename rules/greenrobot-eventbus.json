@@ -1,0 +1,21 @@
+{
+    "publisher": "GreenRobot",
+    "updated": "2022-06-16",
+    "package": "GreenRobot EventBus",
+    "license": "Apache-2.0",
+    "symbols": [
+        "EventBusTest",
+        "EventBusInheritanceDisabledSubclassTest",
+        "EventBusNoSubscriberEventTestWithIndex",
+        "EventBusCancelEventDeliveryTestWithIndex",
+        "kEventBusTestSubscriberInJar",
+        "EventBus",
+        "greenrobot",
+        "UOEventBusTestJava",
+        "EventBusGenericsTest",
+        "EventBusAnnotationProcessor",
+        "fJOgTEventBusTest",
+        "EventBusInheritanceTest",
+        "EventBusTestJava"
+    ]
+}

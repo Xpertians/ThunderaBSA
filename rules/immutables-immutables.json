@@ -1,0 +1,14 @@
+{
+    "publisher": "Immutables",
+    "updated": "2022-06-16",
+    "package": "Immutables",
+    "license": "Apache-2.0",
+    "symbols": [
+        "immutables",
+        "IMMUTABLES_SUBTYPE",
+        "deepImmutablesDetection",
+        "DeepImmutablesDetectionTest",
+        "CustomImmutables",
+        "IMMUTABLES"
+    ]
+}

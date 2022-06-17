@@ -1,0 +1,12 @@
+{
+    "publisher": "JetBrains",
+    "updated": "2022-06-16",
+    "package": "JetBrains - java-annotations",
+    "license": "Apache-2.0",
+    "symbols": [
+      "org.intellij.lang",
+      "intellij",
+      "jetbrains",
+      "org.jetbrains.annotations"
+    ]
+}

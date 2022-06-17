@@ -1,0 +1,14 @@
+{
+    "publisher": "Google",
+    "updated": "2022-06-16",
+    "package": "Volley HTTP Lib",
+    "license": "Apache-2.0",
+    "symbols": [
+        "volley",
+        "VolleyLog",
+        "volley-request",
+        "Volley",
+        "VolleyLog",
+        "VolleyError"
+    ]
+}

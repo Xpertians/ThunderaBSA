@@ -1,0 +1,15 @@
+{
+    "publisher": "Google",
+    "updated": "2022-06-16",
+    "package": "Protobuf Library",
+    "license": "BSD-3-Clause",
+    "symbols": [
+        "GOOGLE_PROTOBUF_UTIL_INTERNAL_UTILITY_H__",
+        "protobuf",
+        "GOOGLE_PROTOBUF_COMPILER_JAVA_MESSAGE_FIELD_LITE_H__",
+        "GOOGLE_PROTOBUF_EXTENSION_SET_INL_H__",
+        "GOOGLE_PROTOBUF_PLATFORM_MACROS_H_",
+        "GOOGLE_PROTOBUF_STUBS_STRUTIL_H__",
+        "ProtobufUnittest"
+    ]
+}
