@@ -4,7 +4,6 @@
     "package": "FasterXML Jackson",
     "license": "Apache-2.0",
     "symbols": [
-        "support",
         "codehaus",
         "jackson",
         "FasterXML",
