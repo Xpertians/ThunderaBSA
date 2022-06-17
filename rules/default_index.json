@@ -1,70 +1,262 @@
 {
-    "9e5dfd0b0718cd44ae3f818e82c620c7": {
+    "b9715452b53fcfeac38402a7b364e307": {
         "filename": "airbnb-lottie-android.json",
         "active": true
     },
-    "4721ac95fdf28f066715ae4079dcfa78": {
+    "3d9260fa14b42c5f185d061de86c29b3": {
         "filename": "apache-avro.json",
         "active": true
     },
-    "f61f558c493e6a1fbb012bb8bcf7f3e2": {
-        "filename": "apache-cordova.json",
-        "active": true
-    },
-    "a741ed8d61586c9b75e8e6b180733082": {
+    "09b9f3fa518f0eaa31c0ff52d4435363": {
         "filename": "apache-commons.json",
         "active": true
     },
-    "65e04a72e440fc4153b0cc3f4e8bbed3": {
-        "filename": "apache-solr.json",
+    "3a3f7d87fc09362bbf855f660956edc1": {
+        "filename": "apache-cordova.json",
         "active": true
     },
-    "c7db841a832b27efda6699dee5ec8fd3": {
-        "filename": "apache-lucene.json",
-        "active": true
-    },
-    "bdfb88f37dfdf8a37efc9da9a9d45698": {
+    "5dc874e1cdc9ec2234620a960386f098": {
         "filename": "apache-httpcore.json",
         "active": true
     },
-    "bab06a53f2465ee6dc056c818013ba6c": {
+    "064db43471aec57e94bd872bc2a03cf7": {
+        "filename": "apache-lucene.json",
+        "active": true
+    },
+    "133041c3e7acef3a0b230deafc82ad88": {
+        "filename": "apache-solr.json",
+        "active": true
+    },
+    "dd2c333fedbbae17e9191e57ae4750ee": {
         "filename": "boltsframework-android.json",
         "active": true
     },
-    "87ab9e846483c431e91f1ae8b33fb7a6": {
-        "filename": "facebook-android-sdk.json",
-        "active": true
-    },
-    "5aeb3e57e197108c4c1fa28b996021ca": {
+    "1ac8d3bf73801c6cfe31e271270d3f61": {
         "filename": "bouncycastle.json",
         "active": true
     },
-    "c581f62bfa828aee0c6dab1448327e89": {
+    "dea1541000b3b85f2cadc18a64b834cf": {
         "filename": "bumptech-glide.json",
         "active": true
     },
-    "8eef1b69d4a2338bddc5e5728ff816a0": {
+    "bc546c19e9d6f001a3440c77aff7365b": {
         "filename": "chrisbanes-photoview.json",
         "active": true
     },
-    "cb40500534416c3b3cc99cf26bd60b4b": {
+    "720bdeff449b5b6f42578f9a93027e7d": {
         "filename": "comscore-android-sdk.json",
         "active": true
     },
-    "e33099eca3ba293cee374d7023b989cd": {
+    "9036c9e775d738855eb8f88e21f0544f": {
         "filename": "costigliola-assertj.json",
         "active": true
     },
-    "565711b3044410091f1dd141ef13ad2c": {
+    "cee2c637383e952549435c2b78b2471a": {
         "filename": "danlew-joda.json",
         "active": true
     },
-    "e0aa16f9af3424d117a7942af15b1b39": {
+    "c0ef952923dc89574ef395112e7fb593": {
+        "filename": "facebook-android-sdk.json",
+        "active": true
+    },
+    "4723ff4a4587006c38100df09ba67fb1": {
         "filename": "facebook-fresco.json",
         "active": true
     },
-    "5782bfc3febe23f0e9389796c2758b10": {
+    "07e386a94ce33c30feccc88df23c82d5": {
         "filename": "facebook-infer.json",
+        "active": true
+    },
+    "d217dc267d73e5cf019c1725cd3905ed": {
+        "filename": "facebook-react-native.json",
+        "active": true
+    },
+    "ccbc8d90e9c2ee1e6ac606de4538b228": {
+        "filename": "facebook-yoga.json",
+        "active": true
+    },
+    "7dcc2846d781ff38a8dca18ec8adabe5": {
+        "filename": "fangyidong-json-simple.json",
+        "active": true
+    },
+    "4813859b46ab74932f91349bf132ba15": {
+        "filename": "fasterxml-jackson.json",
+        "active": true
+    },
+    "08d12ed443ac55a803a4d2542e132b32": {
+        "filename": "google-ads.json",
+        "active": true
+    },
+    "d8578f66ba6a3039ca3e08c3769513d9": {
+        "filename": "google-android.json",
+        "active": true
+    },
+    "a2e2adbc159e8a05b8990ac9bcbd89c6": {
+        "filename": "google-conscrypt.json",
+        "active": true
+    },
+    "2065b6506b9be4f91fd2e9650307edd4": {
+        "filename": "google-dagger.json",
+        "active": true
+    },
+    "f012c927babf3b45b39da94a2233d5cc": {
+        "filename": "google-firebase.json",
+        "active": true
+    },
+    "1e3bc4827d429f73b174c4e786d69bb7": {
+        "filename": "google-gson.json",
+        "active": true
+    },
+    "63be5e08be27bd83f12e77904bd16a24": {
+        "filename": "google-guava.json",
+        "active": true
+    },
+    "434ac52f42034120feccb13879413841": {
+        "filename": "google-j2objc.json",
+        "active": true
+    },
+    "4169b98b9f79ad2bc130573cf365b8b6": {
+        "filename": "google-protobuf.json",
+        "active": true
+    },
+    "d41ccdb006888fd77c2207be44ed4172": {
+        "filename": "google-volley.json",
+        "active": true
+    },
+    "a30cd4a21cf3956ad6383864c30da8e5": {
+        "filename": "google-zxing.json",
+        "active": true
+    },
+    "86170be1e731d2f429dee5aca23fdd97": {
+        "filename": "greenrobot-eventbus.json",
+        "active": true
+    },
+    "a93bc1c0a6b1f5d254e7a62a6228b970": {
+        "filename": "immutables-immutables.json",
+        "active": true
+    },
+    "7509801632b31e65ae1490c3c87e50d2": {
+        "filename": "jakewharton-butterknife.json",
+        "active": true
+    },
+    "d87d6fd6810e6615deeb816d83cae300": {
+        "filename": "java-core.json",
+        "active": true
+    },
+    "f5283bebe7721e338ec3e0b0f670c2b7": {
+        "filename": "jetbrains-javaannotations.json",
+        "active": true
+    },
+    "c179ea3de85e00beaf306c1d82bec00d": {
+        "filename": "jodaorg-joda.json",
+        "active": true
+    },
+    "f4544824becaf337d30d9c18cfe5f6db": {
+        "filename": "kotlin-core.json",
+        "active": true
+    },
+    "0b095a85dfcbba0e4d09e9df2f3c313e": {
+        "filename": "leolin-shortcutbadger.json",
+        "active": true
+    },
+    "24b5d976685bbf1d8ec70f7120d66a06": {
+        "filename": "localytics-sdk.json",
+        "active": true
+    },
+    "d55fa412fbd22fedca0467dbb3330197": {
+        "filename": "mikeortiz-touchimageview.json",
+        "active": true
+    },
+    "ceeff5445742e7eef7259ba7e647679a": {
+        "filename": "mit-krb5.json",
+        "active": true
+    },
+    "61167e83be7ae8faff03860031cf6b45": {
+        "filename": "nanohttpd-nanohttpd.json",
+        "active": true
+    },
+    "5d7b31651e1953e877536f09446d060a": {
+        "filename": "netinsight-sye.json",
+        "active": true
+    },
+    "06a1b73bed01c8d4eb052568d28508e8": {
+        "filename": "netty-netty.json",
+        "active": true
+    },
+    "9b681cf5913f7cf34bd53c753f7d0693": {
+        "filename": "nostra13-universalimageloader.json",
+        "active": true
+    },
+    "3dd8e87f93d5dcf35258857832f02cea": {
+        "filename": "qos-slf4j.json",
+        "active": true
+    },
+    "ba1a9bd045a2d3923ff2c1fe5ff67862": {
+        "filename": "reactivex-rxjava.json",
+        "active": true
+    },
+    "1a6dcf7d4c0712815705fa703da323b9": {
+        "filename": "roughike-bottombar.json",
+        "active": true
+    },
+    "57f616b5ee45f5cd9953beaa70ffc0c9": {
+        "filename": "rtyley-spongycastle.json",
+        "active": true
+    },
+    "6692c90cb4fb794afb1709bf416c943c": {
+        "filename": "rzwitserloot-lombok.json",
+        "active": true
+    },
+    "7832656ec5ebf8f6e28bb6927c19371b": {
+        "filename": "samsung-android.json",
+        "active": true
+    },
+    "1cdc2eb5403fb0ef69316ba1150b2d47": {
+        "filename": "sax-sax-parser.json",
+        "active": true
+    },
+    "dcdbcc210a5fa0af3b17badcb8b8820a": {
+        "filename": "square-haha.json",
+        "active": true
+    },
+    "41f06a8ca35e918a19be99bde7eeb05a": {
+        "filename": "square-javapoet.json",
+        "active": true
+    },
+    "19a1f03d6436bb1f2dd879a6d56200f5": {
+        "filename": "square-leakcanary.json",
+        "active": true
+    },
+    "8a82448970e25a6f66cac7f5fb4b6940": {
+        "filename": "square-okhttp.json",
+        "active": true
+    },
+    "fd3153eb1029952f6ffdb302572de7ad": {
+        "filename": "square-okio.json",
+        "active": true
+    },
+    "36f755fd853d8ea0378bad34e164b169": {
+        "filename": "square-picasso.json",
+        "active": true
+    },
+    "7a09e95249544dc4b48dc1c74732b022": {
+        "filename": "square-retrofit.json",
+        "active": true
+    },
+    "7fe149ecc602d9755add0c1fdeef768e": {
+        "filename": "thoughtworks-paranamer.json",
+        "active": true
+    },
+    "4fb9d41fb3800d8ff68e7646e8c0acfa": {
+        "filename": "tune-androidsdk.json",
+        "active": true
+    },
+    "74fb1240bee2fc53f0f42e9e158e013a": {
+        "filename": "umd-multithreadedtc.json",
+        "active": true
+    },
+    "1bd66256b0f2be03de7bb8d90223854c": {
+        "filename": "waywardgeek-sonic.json",
         "active": true
     }
 }
