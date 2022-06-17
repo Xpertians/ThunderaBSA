@@ -1,0 +1,11 @@
+{
+    "publisher": "SAX Project",
+    "updated": "2022-06-16",
+    "package": "SAX Parser",
+    "license": "SAX-PD",
+    "symbols": [
+        "sax",
+        "org.xml.sax",
+        "xmlsax"
+    ]
+}

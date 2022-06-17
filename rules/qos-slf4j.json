@@ -1,0 +1,10 @@
+{
+    "publisher": "QOS.ch",
+    "updated": "2022-06-16",
+    "package": "SLF4J",
+    "license": "MIT",
+    "symbols": [
+        "slf4j",
+        "org.slf4j"
+    ]
+}

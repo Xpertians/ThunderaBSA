@@ -1,0 +1,12 @@
+{
+    "publisher": "Lombok",
+    "updated": "2022-06-16",
+    "package": "Project Lombok",
+    "license": "MIT",
+    "symbols": [
+        "delombok",
+        "lombok",
+        "lombok.extern",
+        "lombok.launch"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "publisher": "University of Maryland",
+    "updated": "2022-06-16",
+    "package": "MultithreadedTC framework",
+    "license": "BSD-3-Clause",
+    "symbols": [
+        "edu.umd.cs",
+        "umdcs"
+    ]
+}

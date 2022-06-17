@@ -1,0 +1,10 @@
+{
+    "publisher": "NanoHttpd",
+    "updated": "2022-06-16",
+    "package": "NanoHttpd - HTTP server",
+    "license": "BSD-3-Clause",
+    "symbols": [
+        "nanohttpd",
+        "org.nanohttpd"
+    ]
+}

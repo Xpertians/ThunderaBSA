@@ -1,0 +1,11 @@
+{
+    "publisher": "Roughike",
+    "updated": "2022-06-16",
+    "package": "Roughike BottomBar",
+    "license": "Apache-2.0",
+    "symbols": [
+        "roughike",
+        "bottombar",
+        "roughike.bottombar"
+    ]
+}

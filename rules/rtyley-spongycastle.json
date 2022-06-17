@@ -1,0 +1,10 @@
+{
+    "publisher": "rtyley",
+    "updated": "2022-06-16",
+    "package": "Spongy Castle",
+    "license": "MIT",
+    "symbols": [
+        "spongycastle",
+        "org.spongycastle"
+    ]
+}

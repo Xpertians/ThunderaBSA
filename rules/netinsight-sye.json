@@ -1,0 +1,10 @@
+{
+    "publisher": "Netinsight",
+    "updated": "2022-06-16",
+    "package": "Netinsight Sye Tools",
+    "license": "MIT+Propietary",
+    "symbols": [
+        "netinsight",
+        "netinsight.sye"
+    ]
+}

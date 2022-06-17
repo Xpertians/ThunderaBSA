@@ -1,0 +1,10 @@
+{
+    "publisher": "MikeOrtiz",
+    "updated": "2022-06-16",
+    "package": "TouchImageView",
+    "license": "MIT",
+    "symbols": [
+      "ortiz.touch",
+      "ortiz"
+    ]
+}

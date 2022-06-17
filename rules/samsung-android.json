@@ -1,0 +1,11 @@
+{
+    "publisher": "Samsung",
+    "updated": "2022-06-16",
+    "package": "Samsung Android SDK",
+    "license": "Propietary",
+    "symbols": [
+        "samsung",
+        "com.samsung.android",
+        "samsungandroid"
+    ]
+}

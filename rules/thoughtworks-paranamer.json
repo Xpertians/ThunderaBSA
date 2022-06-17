@@ -1,0 +1,12 @@
+{
+    "publisher": "Thoughtworks",
+    "updated": "2022-06-16",
+    "package": "Paranamer",
+    "license": "BSD-3-Clause",
+    "symbols": [
+        "thoughtworks",
+        "paranamer",
+        "thoughtworks.paranamer",
+        "thoughtworksparanamer"
+    ]
+}

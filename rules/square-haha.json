@@ -1,0 +1,12 @@
+{
+    "publisher": "Square",
+    "updated": "2022-06-16",
+    "package": "HAHA - Headless Android Heap Analyzer",
+    "license": "Apache-2.0",
+    "symbols": [
+        "squareup",
+        "hah",
+        "squareup.hah",
+        "squareuphah"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "publisher": "Square",
+    "updated": "2022-06-16",
+    "package": "Picasso",
+    "license": "Apache-2.0",
+    "symbols": [
+        "squareup",
+        "picasso",
+        "squareup.picasso",
+        "squareuppicasso"
+    ]
+}

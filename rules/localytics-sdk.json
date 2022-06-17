@@ -2,7 +2,7 @@
     "publisher": "Localytics",
     "updated": "2022-06-16",
     "package": "Localytics Android SDK",
-    "license": "OSS-CommercialToS",
+    "license": "Apache-2.0+CommercialToS",
     "symbols": [
       "localytics.android",
       "localytics",

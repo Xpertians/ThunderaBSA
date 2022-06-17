@@ -1,0 +1,10 @@
+{
+    "publisher": "BranchMetrics",
+    "updated": "2022-06-16",
+    "package": "Tune MobileAppTracking Library",
+    "license": "LGPL-3.0|Propietary",
+    "symbols": [
+        "tune",
+        "tune."
+    ]
+}

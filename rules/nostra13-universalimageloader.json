@@ -1,0 +1,10 @@
+{
+    "publisher": "NOSTRA13",
+    "updated": "2022-06-16",
+    "package": "NOSTRA13 Android Universal Image Loader",
+    "license": "Apache-2.0",
+    "symbols": [
+        "nostra13",
+        "nostra13.universalimageloader"
+    ]
+}

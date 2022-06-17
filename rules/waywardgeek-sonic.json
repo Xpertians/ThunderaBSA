@@ -1,0 +1,11 @@
+{
+    "publisher": "waywardgeek",
+    "updated": "2022-06-16",
+    "package": "Waywardgeek Sonic Library",
+    "license": "Apache-2.0",
+    "symbols": [
+        "sonic.Sonic",
+        "sonicSonic",
+        "Sonic"
+    ]
+}
