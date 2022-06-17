@@ -47,5 +47,6 @@ setup(
         [console_scripts]
         thundera=thundera.thundera:cli
     ''',
-    zip_safe=False
+    zip_safe=False,
+    include_package_data=True
 )
