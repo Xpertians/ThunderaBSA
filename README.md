@@ -19,7 +19,7 @@ $ sudo apt install universal-ctags elfutils binutils libimage-exiftool-perl g++ 
 
 $ pip3 install thunderabsa
 
-*** If you are not able to find universal-ctags, please install the package from source. This tool will not work with the Ubuntu package exuberant-ctags. ***
+** If you are not able to find universal-ctags, please install the package from source. This tool will not work with the Ubuntu package exuberant-ctags. **
 
 ## Development
 ### Libraries
