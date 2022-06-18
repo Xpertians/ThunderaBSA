@@ -1,0 +1,22 @@
+{
+  "name": "ARMmbed TLS",
+  "description": "Mbed TLS is a C library that implements cryptographic primitives, X.509 certificate manipulation and the SSL/TLS and DTLS protocols.",
+  "Notes": "",
+  "author": "ARMmbed",
+  "homepage": "https://github.com/ARMmbed/mbedtls",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/ARMmbed/mbedtls/blob/development/LICENSE"
+  },
+  "language": "native",
+  "keywords": [
+    "ARMmbed",
+    "TLS"
+  ],
+  "symbols": [
+    "mbedTLSX509Crl",
+    "mbedTLSSSLConfig",
+    "mbedtls_"
+  ]
+}

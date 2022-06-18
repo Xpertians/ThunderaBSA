@@ -1,0 +1,20 @@
+{
+  "name": "Libunwind",
+  "description": "Libunwind defines a portable and efficient C programming interface (API) to determine the call-chain of a program.",
+  "Notes": "",
+  "author": "libunwind",
+  "homepage": "https://savannah.nongnu.org/projects/libunwind/",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://github.com/libunwind/libunwind/blob/master/LICENSE"
+  },
+  "language": "native",
+  "keywords": [
+    "libunwind"
+  ],
+  "symbols": [
+    "unw_map_",
+    "unw_backtrace"
+  ]
+}

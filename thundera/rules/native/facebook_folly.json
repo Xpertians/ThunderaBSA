@@ -1,0 +1,20 @@
+{
+  "name": "Facebook Folly",
+  "description": "An open-source C++ library developed and used at Facebook.",
+  "Notes": "",
+  "author": "Facebook",
+  "homepage": "https://github.com/facebook/folly",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/facebook/folly/blob/master/LICENSE"
+  },
+  "language": "native",
+  "keywords": [
+    "facebook",
+    "folly"
+  ],
+  "symbols": [
+    "folly:"
+  ]
+}

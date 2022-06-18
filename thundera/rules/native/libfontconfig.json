@@ -1,0 +1,21 @@
+{
+  "name": "Fontconfig",
+  "description": "Fontconfig is a library for configuring and customizing font access.",
+  "Notes": "",
+  "author": "freedesktop",
+  "homepage": "https://www.freedesktop.org/wiki/Software/fontconfig/",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://cgit.freedesktop.org/fontconfig/tree/COPYING"
+  },
+  "language": "native",
+  "keywords": [
+    "libfontconfig"
+  ],
+  "symbols": [
+    "FcAtomic",
+    "FcBlank",
+    "FcValue"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "OpenSLMediaPlayer",
+  "description": "Re-implementation of Android's MediaPlayer and audio effect classes based on OpenSL ES APIs.",
+  "Notes": "",
+  "author": "h6ah4i",
+  "homepage": "https://openslmediaplayer.h6ah4i.com/",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/h6ah4i/android-openslmediaplayer/blob/master/LICENSE"
+  },
+  "language": "native",
+  "keywords": [
+    "OpenSLMediaPlayer",
+    "OpenSLEngine",
+    "SLDataSource"
+  ],
+  "symbols": [
+    "OpenSLMediaPlayer",
+    "OpenSLEngine"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Xiph LibOpus",
+  "description": "Library for encoding .opus audio files and live streams.",
+  "Notes": "",
+  "author": "Xiph.Org Foundation",
+  "homepage": "https://www.opus-codec.org/",
+  "license": {
+    "spdx": "BSD-3-Clause",
+    "type": "permissive",
+    "url": "https://github.com/xiph/libopusenc/blob/master/COPYING"
+  },
+  "language": "native",
+  "keywords": [
+    "Opus-tools",
+    "Libopusenc",
+    "ffmpeg"
+  ],
+  "symbols": [
+    "ope_comments_add",
+    "libopusenc",
+    "opus_decode_float",
+    "OggOpusEncoder",
+    "OggCallback",
+    "opus_multistream_"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "ARMmbed TLS C++ Socket API",
+  "description": "A C++ Sockets-like API for mbed TLS.",
+  "Notes": "",
+  "author": "ARMmbed",
+  "homepage": "https://github.com/ARMmbed/mbed-tls-sockets",
+  "license": {
+    "spdx": "Apache-2.0",
+    "type": "permissive",
+    "url": "https://github.com/ARMmbed/mbed-tls-sockets/blob/master/apache-2.0.txt"
+  },
+  "language": "native",
+  "keywords": [
+    "ARMmbed",
+    "Socket",
+    "TLS"
+  ],
+  "symbols": [
+    "mbedTLSSocket",
+    "mbedTLSStrError"
+  ]
+}

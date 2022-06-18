@@ -1,0 +1,19 @@
+{
+  "name": "Fast C++ logging - spdlog",
+  "description": "Fast C++ logging library.",
+  "Notes": "",
+  "author": "Gabi Melman",
+  "homepage": "https://github.com/gabime/spdlog",
+  "license": {
+    "spdx": "MIT",
+    "type": "permissive",
+    "url": "https://github.com/gabime/spdlog/blob/v1.x/LICENSE"
+  },
+  "language": "native",
+  "keywords": [
+    "boost"
+  ],
+  "symbols": [
+    "spdlog::"
+  ]
+}

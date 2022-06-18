@@ -1,0 +1,19 @@
+{
+  "name": "FMT formatting library",
+  "description": "A new formatting library.",
+  "Notes": "",
+  "author": "Aelve",
+  "homepage": "https://github.com/aelve/fmt/",
+  "license": {
+    "spdx": "BSD-3-Clause",
+    "type": "permissive",
+    "url": "https://github.com/aelve/fmt/blob/master/LICENSE"
+  },
+  "language": "native",
+  "keywords": [
+    "fmt"
+  ],
+  "symbols": [
+    "fmt::"
+  ]
+}

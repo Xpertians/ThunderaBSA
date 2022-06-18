@@ -1,0 +1,22 @@
+{
+  "name": "GNU GCC",
+  "description": "GNU C Compiler and C Libraries",
+  "Notes": "",
+  "author": "GNU",
+  "homepage": "https://gcc.gnu.org/",
+  "license": {
+    "spdx": "GCC-exception-3.1",
+    "type": "copyleft",
+    "url": "https://gcc.gnu.org/onlinedocs/libstdc++/manual/license.html#manual.intro.status.license.gpl"
+  },
+  "language": "native",
+  "keywords": [
+    "gnu",
+    "gcc"
+  ],
+  "symbols": [
+    "std:",
+    "__gnu_cxx:",
+    "__cxxabiv1:"
+  ]
+}
