@@ -1,12 +1,14 @@
 # ThunderaBSA-Cli
 
-ThunderaBSA it's a Binary Static Analysis tool that infers what Open Source packages are present on binary apps by searching for "symbols."
+ThunderaBSA it's a Binary Static Analysis tool that uses symbols (strings) extracted from a binary (compiled) software to "infer" the list of Open Source packages used in the software.
 
-A "symbol" for ThunderaBSA it's the representation of a file property (file name, file path, folders names) or content (symtree, class names, function names, variable names).
+ThunderaBSA doesn't perform reverse engineering over the software. Instead, it extracts the symbols (strings) from software in the same fashion as the operative system scan for file mime-types or file sizes.
 
-ThunderaBSA doesn't perform reverse engineering over the software. Instead, it extracts the symbols offered by the file's metadata, the same way as the operative system scan for file mime-types or file sizes.
+## Context
 
-The CLI (ThunderaBSA CLI) it's one of the three main components of the project. The CLI tool scan files to extract symbols and export the "symbols" to a report file. The reports can be used later by other components to perform the symbol matching offline.
+A "symbol" it's a representation of a file property (file name, file path, folders names) or content (symtree, class names, function names, variable names).
+
+ThunderaBSA extract the symbols from the source code of well known OSS packages to build a Compliance Library (CL), that's later used to match symbols on binary files.
 
 ## Installation
 ThunderaBSA requires a few tools to be available on your system:
@@ -17,7 +19,7 @@ $ sudo apt install universal-ctags elfutils binutils libimage-exiftool-perl g++ 
 
 $ pip3 install thunderabsa
 
-If you are not able to find universal-ctags, please install the package from source. This tool will not work with the Ubuntu package exuberant-ctags, you need to install universal-ctags
+*** If you are not able to find universal-ctags, please install the package from source. This tool will not work with the Ubuntu package exuberant-ctags. ***
 
 ## Development
 ### Libraries
