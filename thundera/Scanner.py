@@ -150,17 +150,15 @@ class Scanner:
                         else:
                             self.debug.error(" file not listed:" + file)
                     elif filetype in 'application/java-archive':
-                        # print('bunzip2:', file)
+                        # print('java-archive:', file)
                         # Pending Implementation
                         if file in self.filelist:
                             self.filelist.remove(file)
                         else:
                             self.debug.error(" file not listed:" + file)
                     else:
-                        # print('else:', file)
                         self.debug.error("Missing Archive Handler for:" + filetype)
                         self.debug.error(" > " + file)
-                        self.debug.error(" loop:" + str(loop))
                     for cdp, csb, cfs in os.walk(new_dir):
                         for aFile in cfs:
                             file_path = str(os.path.join(cdp, aFile))
