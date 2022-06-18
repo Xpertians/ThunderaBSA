@@ -1,4 +1,4 @@
-# ThunderaBSA-Cli
+# ThunderaBSA
 
 ThunderaBSA it's a Binary Static Analysis tool that uses symbols (strings) extracted from a binary (compiled) software to "infer" the list of Open Source packages used in the software.
 
