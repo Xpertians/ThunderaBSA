@@ -25,14 +25,17 @@ $ pip3 install thunderabsa
 ## Using Thundera
 
 After installing ThunderaBSA, the options to run the software are simple:
+
 $ thundera folder/
 
 A detailed (verbose) option can be executed by adding the respective parameter:
+
 $ thundera folder/ --verbose
 
 ### Rules generation
 
 ThunderaBSA can extract symbols from any software by using the function **extract**.
+
 $ thundera --extract folder/
 
 The tool will generate a single JSON file with the list of symbols. In some cases, the output can be optimized by filtering an string.
