@@ -32,6 +32,6 @@ class CtagsHandler:
             cols = line.split()
             if len(cols) >= 2:
                 if len(cols[0]) >= 5:
-                    self.symlst.append(str(cols[0]))
+                    self.symlst.append(str(cols[0]).encode().decode())
         self.symlst = sorted(set(self.symlst))
         return ','.join(self.symlst)

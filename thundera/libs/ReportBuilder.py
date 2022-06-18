@@ -64,10 +64,15 @@ class ReportBuilder:
 
     def export_matches_csv(self, csv_data):
         fname = './thundera-matches.csv'
-        csv_columns = ['Rule','Package','License', 'File', 'Matches']
+        csv_columns = [
+            'Rule',
+            'Package',
+            'License',
+            'File',
+            'Matches']
         try:
             writer = csv.writer(
-                open(fname,"w"),
+                open(fname, "w"),
                 delimiter=',',
                 quoting=csv.QUOTE_ALL)
             writer.writerow(csv_columns)

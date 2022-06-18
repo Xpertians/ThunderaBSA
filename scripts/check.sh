@@ -35,7 +35,7 @@ echo "Running Thundera WHL"
 #thundera ./testfiles/testfolder/
 #thundera /bin/
 #thundera ./testfiles/packages/avro-master/
-thundera ./testfiles/
+thundera ./testfiles/libwebsockets/
 
 
 echo "Deactivating Thundera ENV"

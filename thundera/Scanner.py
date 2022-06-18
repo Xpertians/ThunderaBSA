@@ -57,7 +57,10 @@ class Scanner:
                 matches = []
                 checksum = fileHandler.exp_checksum()
                 if len(symbols) >= 1:
-                    symbols = list(filter(lambda i: i not in self.ignore, symbols))
+                    symbols = list(
+                        filter(
+                            lambda i: i not in self.ignore,
+                            symbols))
                     self.procfiles.append(filepath)
                     basename = os.path.basename(filepath)
                     basename = os.path.splitext(basename)[0]
@@ -157,7 +160,7 @@ class Scanner:
                         else:
                             self.debug.error(" file not listed:" + file)
                     else:
-                        self.debug.error("Missing Archive Handler for:" + filetype)
+                        self.debug.error("Missing Archive Handler:" + filetype)
                         self.debug.error(" > " + file)
                     for cdp, csb, cfs in os.walk(new_dir):
                         for aFile in cfs:

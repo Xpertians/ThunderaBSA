@@ -160,10 +160,10 @@ class FileHandler:
             'application/x-java-applet': self.handle_strings,
 
             # Ignored mimetypes
-            'application/gzip': self.ignore, # needs dedupe
-            'application/zip': self.ignore, # needs dedupe
-            'application/x-xz': self.ignore, # needs dedupe
-            'application/java-archive': self.ignore, # needs dedupe
+            'application/gzip': self.ignore,
+            'application/zip': self.ignore,
+            'application/x-xz': self.ignore,
+            'application/java-archive': self.ignore,
             'application/x-pgp-keyring': self.ignore,
             'application/pgp-keys': self.ignore,
             'image/vnd.adobe.photoshop': self.ignore,
