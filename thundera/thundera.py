@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import re
 import sys
 import click
 import calendar
@@ -65,7 +66,7 @@ def cli(target, extract, filter, update, output, format):
             format = 'JSON'
     else:
         format = 'JSON'
-        
+
     if update:
         msg = "function UPDATE not available"
         click.echo(msg)

@@ -15,7 +15,7 @@ class RulesHandler:
         self.debug = errorHandler
         self.ignore = []
         self.rules = {}
-        self.rules_path = "rules/"
+        self.rules_path = "thundera/rules/"
         self.ign_file = "default_ignore.json"
         self.idx_file = "default_index.json"
         self.usr_cfg_dir = os.path.expanduser("~") + "/.config/thunderabsa/"

@@ -1,1 +1,1 @@
-recursive-include rules/*.json 
+include thundera/rules/*
