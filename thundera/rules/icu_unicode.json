@@ -1,0 +1,11 @@
+{
+    "publisher": "Unicode",
+    "updated": "2022-06-05",
+    "package": "International Components for Unicode",
+    "license": "Unicode-TOU",
+    "symbols": [
+      "icu_",
+      "UCollationElements",
+      "icudta"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "publisher": "HarfBuzz",
+    "updated": "2022-06-05",
+    "package": "HarfBuzz",
+    "license": "MIT",
+    "symbols": [
+      "hb_ot_map_t",
+      "hb_buffer_t",
+      "OT:"
+    ]
+}

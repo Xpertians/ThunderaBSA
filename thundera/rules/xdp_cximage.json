@@ -1,0 +1,14 @@
+{
+    "publisher": "Davide Pizzolato",
+    "updated": "2022-06-05",
+    "package": "CImage and CImageIterator",
+    "license": "BSD-3-Clause",
+    "symbols": [
+      "CxImage",
+      "CxFile",
+      "CxRect",
+      "CxIOFile",
+      "CxPoint",
+      "CxMemFile"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "publisher": "Free Software Foundation",
+    "updated": "2022-06-05",
+    "package": "GNU C Compiler and C Libraries",
+    "license": "GCC-exception-3.1",
+    "symbols": [
+      "std:",
+      "__gnu_cxx",
+      "__cxxabiv1"
+    ]
+}

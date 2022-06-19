@@ -1,0 +1,10 @@
+{
+    "publisher": "Aelve",
+    "updated": "2022-06-05",
+    "package": "FMT formatting library",
+    "license": "BSD-3-Clause",
+    "symbols": [
+      "fmt:",
+      "fmt"
+    ]
+}

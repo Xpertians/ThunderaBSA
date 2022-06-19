@@ -4,6 +4,11 @@
     "package": "React Native",
     "license": "MIT",
     "symbols": [
+        "LogcatSink",
+        "OpaqueJSClass",
+        "OpaqueJSString",
+        "TaggedLogcatSink",
+        "facebook::react:",
         "toreact-native",
         "clearReactRoot",
         "ReactAccessibilityServiceChangeListener",

@@ -1,0 +1,10 @@
+{
+    "publisher": "kazuho",
+    "updated": "2022-06-05",
+    "package": "PicoJSON",
+    "license": "BSD-2-Clause",
+    "symbols": [
+      "picojson",
+      "serialize_str_char"
+    ]
+}

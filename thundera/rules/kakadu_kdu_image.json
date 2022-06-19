@@ -1,0 +1,12 @@
+{
+    "publisher": "David Taubman",
+    "updated": "2022-06-05",
+    "package": "Kakadu framework",
+    "license": "NON-COMMERCIAL, https://bit.ly/2GlEjbs",
+    "symbols": [
+      "jp2_",
+      "kdu_",
+      "kdu",
+      "kd_"
+    ]
+}

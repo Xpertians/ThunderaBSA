@@ -1,0 +1,12 @@
+{
+    "publisher": "KDE",
+    "updated": "2022-06-05",
+    "package": "WebKit, WebCore and JSC",
+    "license": "BSD-3-Clause, LGPL-2.1",
+    "symbols": [
+      "WebCore",
+      "WTF",
+      "SVGViewer",
+      "JSC"
+    ]
+}

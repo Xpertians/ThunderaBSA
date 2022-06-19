@@ -1,0 +1,11 @@
+{
+    "publisher": "Boost",
+    "updated": "2022-06-05",
+    "package": "Boost and Boost-Options",
+    "license": "BSL-1.0",
+    "symbols": [
+      "boost:",
+      "asio:",
+      "asio"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "publisher": "Xiph.Org Foundation",
+    "updated": "2022-06-05",
+    "package": "Xiph LibOpus",
+    "license": "BSD-3-Clause",
+    "symbols": [
+      "ope_comments_add",
+      "libopusenc",
+      "opus_decode_float",
+      "OggOpusEncoder",
+      "OggCallback",
+      "opus_multistream"
+    ]
+}

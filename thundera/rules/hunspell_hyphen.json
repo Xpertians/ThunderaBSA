@@ -1,0 +1,10 @@
+{
+    "publisher": "Hunspell",
+    "updated": "2022-06-05",
+    "package": "Hunspell Hyphen",
+    "license": "GPL 2.0/LGPL 2.1/MPL 1.1",
+    "symbols": [
+      "libhyphen",
+      "HyphenNativeWrapper"
+    ]
+}

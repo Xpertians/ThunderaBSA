@@ -1,0 +1,10 @@
+{
+    "publisher": "ARMmbed",
+    "updated": "2022-06-05",
+    "package": "ARMmbed TLS C++ Socket API",
+    "license": "Apache-2.0",
+    "symbols": [
+      "mbedTLSSocket",
+      "mbedTLSStrError"
+    ]
+}

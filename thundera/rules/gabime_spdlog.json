@@ -1,0 +1,10 @@
+{
+    "publisher": "Gabi Melman",
+    "updated": "2022-06-05",
+    "package": "Fast C++ logging - spdlog",
+    "license": "MIT",
+    "symbols": [
+      "spdlog:",
+      "spdlog"
+    ]
+}
