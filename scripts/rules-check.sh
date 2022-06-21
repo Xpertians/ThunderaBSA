@@ -1,5 +1,5 @@
 #!/bin/bash
-rules=`ls *.json | grep -v 'default'`
+rules=`ls thundera/rules/*.json | grep -v 'default'`
 for eachfile in $rules
 do
   echo $eachfile
