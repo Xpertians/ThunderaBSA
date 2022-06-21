@@ -9,6 +9,7 @@ import shutil
 import configparser
 from pkg_resources import resource_stream
 
+
 class RulesHandler:
 
     def __init__(self, errorHandler):
