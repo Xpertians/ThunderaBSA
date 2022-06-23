@@ -45,4 +45,3 @@ class RulesHandler:
         ign_dict = json.load(cfg_file)
         for key, value in ign_dict.items():
             self.ignore = value
-        print(self.ignore)
