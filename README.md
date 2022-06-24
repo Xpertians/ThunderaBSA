@@ -28,9 +28,9 @@ After installing ThunderaBSA, the options to run the software are simple:
 
 $ thundera folder/
 
-A detailed (verbose) option can be executed by adding the respective parameter:
+If you prefer to obtain a CSV report instead of JSON, use the option --output:
 
-$ thundera folder/ --verbose
+$ thundera folder/ --output CSV
 
 ### Rules generation
 
