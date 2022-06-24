@@ -1,0 +1,10 @@
+{
+    "publisher": "Nemanja Trifunovic",
+    "updated": "2022-06-05",
+    "package": "UTF8 CPP",
+    "license": "MIT-Like",
+    "symbols": [
+      "utf8",
+      "utf8:"
+    ]
+}

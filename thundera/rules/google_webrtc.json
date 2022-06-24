@@ -1,0 +1,11 @@
+{
+    "publisher": "Google",
+    "updated": "2022-06-05",
+    "package": "WebRTC",
+    "license": "BSD-3-Clause",
+    "symbols": [
+      "libjingle",
+      "WebRTC",
+      "Java_org_webrtc_"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "publisher": "Pixar Animation Studios",
+    "updated": "2022-06-05",
+    "package": "OpenSubdiv",
+    "license": "Apache-2.0",
+    "symbols": [
+      "GLVertexBuffer"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "publisher": "Libunwind",
+    "updated": "2022-06-05",
+    "package": "Libunwind",
+    "license": "MIT",
+    "symbols": [
+      "unw_map_",
+      "unw_map",
+      "unw_backtrace",
+      "unw_"
+    ]
+}

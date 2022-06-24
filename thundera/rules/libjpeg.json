@@ -1,0 +1,11 @@
+{
+    "publisher": "Independent JPEG Group (IJG)",
+    "updated": "2022-06-05",
+    "package": "Libjpeg",
+    "license": "IJG",
+    "symbols": [
+      "jpeg_",
+      "jsimd_",
+      "jsimd"
+    ]
+}

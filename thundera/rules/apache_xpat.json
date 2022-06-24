@@ -1,0 +1,12 @@
+{
+    "publisher": "W3C",
+    "updated": "2022-06-05",
+    "package": "The Expat XML Parser",
+    "license": "MIT",
+    "symbols": [
+      "XML_DefaultCurrent",
+      "XMLDefaultCurrent",
+      "XML_ExpatVersion",
+      "XMLExpatVersion"
+    ]
+}

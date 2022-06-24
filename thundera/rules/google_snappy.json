@@ -1,0 +1,10 @@
+{
+    "publisher": "Google",
+    "updated": "2022-06-05",
+    "package": "Snappy",
+    "license": "BSD-3-Clause",
+    "symbols": [
+      "snappy",
+      "snappy:"
+    ]
+}

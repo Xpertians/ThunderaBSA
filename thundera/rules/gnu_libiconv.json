@@ -1,0 +1,11 @@
+{
+    "publisher": "Free Software Foundation",
+    "updated": "2022-06-05",
+    "package": "GNU libiconv",
+    "license": "GPL-3.0|LGPL-2.0",
+    "symbols": [
+      "g_iconv",
+      "libiconv_",
+      "iconv_"
+    ]
+}

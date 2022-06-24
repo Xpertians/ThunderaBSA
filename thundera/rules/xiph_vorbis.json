@@ -1,0 +1,10 @@
+{
+    "publisher": "Xiph.Org Foundation",
+    "updated": "2022-06-05",
+    "package": "Xiph Vorbis",
+    "license": "BSD-3-Clause",
+    "symbols": [
+      "OggOpusEncoder",
+      "liboggencoder"
+    ]
+}

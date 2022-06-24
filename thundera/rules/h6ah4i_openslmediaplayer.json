@@ -1,0 +1,10 @@
+{
+    "publisher": "h6ah4i",
+    "updated": "2022-06-05",
+    "package": "OpenSLMediaPlayer",
+    "license": "Apache-2.0",
+    "symbols": [
+      "OpenSLMediaPlayer",
+      "OpenSLEngine"
+    ]
+}
