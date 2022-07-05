@@ -30,6 +30,7 @@ class FileHandler:
     def run_handler(self):
         try:
             handlers = self.preload_handlers()
+            print('filetype:', self.filetype)
             handler = handlers[self.filetype]
             return handler(self.filepath, self.checksum)
         except KeyError:
@@ -222,7 +223,7 @@ class FileHandler:
 
     def get_strings(self, filepath):
         symbols = []
-        if self.filesize >= 10485760:
+        if self.filesize >= 50793600:
             self.debug.info('ignoring ' + self.filepath)
         else:
             try:
