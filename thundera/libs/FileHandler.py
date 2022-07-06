@@ -30,7 +30,6 @@ class FileHandler:
     def run_handler(self):
         try:
             handlers = self.preload_handlers()
-            print('filetype:', self.filetype)
             handler = handlers[self.filetype]
             return handler(self.filepath, self.checksum)
         except KeyError:

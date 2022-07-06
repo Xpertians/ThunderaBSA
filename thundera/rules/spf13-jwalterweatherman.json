@@ -1,0 +1,10 @@
+{
+    "publisher": "Steve Francia",
+    "updated": "2022-07-01",
+    "package": "Jwalterweatherman",
+    "license": "MIT",
+    "symbols": [
+        "Spf13-Jwalterweatherman",
+        "Jwalterweatherman"
+    ]
+}

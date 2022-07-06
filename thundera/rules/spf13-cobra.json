@@ -1,0 +1,10 @@
+{
+    "publisher": "Steve Francia",
+    "updated": "2022-07-01",
+    "package": "cobra",
+    "license": "Apache-2.0",
+    "symbols": [
+        "Spf13-Cobra",
+        "Cobra"
+    ]
+}

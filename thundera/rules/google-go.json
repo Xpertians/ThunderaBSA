@@ -1,0 +1,14 @@
+{
+    "publisher": "The Go Authors",
+    "updated": "2022-07-01",
+    "package": "Go",
+    "license": "BSD-3-Clause",
+    "symbols": [
+        "Go3p",
+        "gopkg",
+        "goroutines",
+        "golang",
+        "gocall",
+        "onGoruntime"
+    ]
+}

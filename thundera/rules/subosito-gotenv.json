@@ -1,0 +1,10 @@
+{
+    "publisher": "Alif Rachmawadi",
+    "updated": "2022-07-01",
+    "package": "gotenv",
+    "license": "MIT",
+    "symbols": [
+        "Go3p-Github-Subosito-Gotenv",
+        "Gotenv"
+    ]
+}

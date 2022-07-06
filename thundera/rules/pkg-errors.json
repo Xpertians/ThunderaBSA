@@ -1,0 +1,10 @@
+{
+    "publisher": "Dave Cheney",
+    "updated": "2022-07-01",
+    "package": "pkg-errors",
+    "license": "BSD-2-Clause",
+    "symbols": [
+        "Github-Pkg-Errors",
+        "pkgerrors"
+    ]
+}

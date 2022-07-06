@@ -1,0 +1,11 @@
+{
+    "publisher": "Frank Schroder",
+    "updated": "2022-07-01",
+    "package": "magiconair/properties",
+    "license": "BSD-2-Clause",
+    "symbols": [
+        "expiredproperties",
+        "properties",
+        "PropertiesString"
+    ]
+}

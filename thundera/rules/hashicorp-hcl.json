@@ -1,0 +1,13 @@
+{
+    "publisher": "HashiCorp",
+    "updated": "2022-07-01",
+    "package": "HCL",
+    "license": "MPL-2.0",
+    "symbols": [
+        "Go3p-Github-Hashicorp-Hcl",
+        "Hcl",
+        "Hashicorp",
+        "HCLToken",
+        "xttHHclient"
+    ]
+}

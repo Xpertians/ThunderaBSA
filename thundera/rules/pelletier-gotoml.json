@@ -1,0 +1,15 @@
+{
+    "publisher": "Thomas Pelletier",
+    "updated": "2022-07-01",
+    "package": "go-toml",
+    "license": "MIT",
+    "symbols": [
+        "Pelletier-GoToml",
+        "GoToml",
+        "tomlValue",
+        "MarshalTOML",
+        "fromTOMLsync",
+        "tomlvunquote",
+        "tomltree"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "publisher": "The Go Authors",
+    "updated": "2022-07-01",
+    "package": "fsnotify",
+    "license": "BSD-2-Clause",
+    "symbols": [
+        "Fsnotify",
+        "funcfsnotify"
+    ]
+}
