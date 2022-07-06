@@ -1,0 +1,11 @@
+{
+    "publisher": "Simon Eskildsen",
+    "updated": "2022-07-01",
+    "package": "logrus",
+    "license": "MIT",
+    "symbols": [
+        "Sirupsen-Logrus",
+        "funclogrus",
+        "maplogrus"
+    ]
+}
