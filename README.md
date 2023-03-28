@@ -22,6 +22,14 @@ $ pip3 install thunderabsa
 
 **If you are not able to find universal-ctags, please install the package from source. This tool will not work with the Ubuntu package exuberant-ctags.**
 
+### For Mac Users
+
+You will need to install brew, and add a few packages:
+
+$ brew install exiftool binutils
+
+$ sudo ln -s /opt/homebrew/opt/binutils/bin/greadelf /usr/local/bin/readelf
+
 ## Using Thundera
 
 After installing ThunderaBSA, the options to run the software are simple:
