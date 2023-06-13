@@ -49,8 +49,3 @@ $ thundera --extract folder/
 The tool will generate a single JSON file with the list of symbols. In some cases, the output can be optimized by filtering an string.
 
 $ thundera --extract folder/ --filter filter-string
-
-
-# Ideas from Symbol Analysis
-* https://edolstra.github.io/pubs/clones-msr2011-final.pdf
-* https://iisp.gatech.edu/sites/default/files/images/identifying_open-source_license_violation_and_1-day_security_risk_at_large_scale.pdf
