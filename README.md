@@ -2,6 +2,12 @@
 
 ## This project has been archived
 
+This project has been officially posted on Amazon GitHub OSPO
+
+https://github.com/amazon-ospo/thunderabsa-cli
+
+## About
+
 ThunderaBSA it's a Binary Static Analysis tool that uses symbols (strings) extracted from a binary (compiled) software to "infer" the list of Open Source packages used in the software.
 
 ThunderaBSA doesn't perform reverse engineering over the software. Instead, it extracts the symbols (strings) from software in the same fashion as the operative system scan for file mime-types or file sizes.
