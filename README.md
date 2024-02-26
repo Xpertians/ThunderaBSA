@@ -1,5 +1,7 @@
 # ThunderaBSA
 
+## This project has been archived
+
 ThunderaBSA it's a Binary Static Analysis tool that uses symbols (strings) extracted from a binary (compiled) software to "infer" the list of Open Source packages used in the software.
 
 ThunderaBSA doesn't perform reverse engineering over the software. Instead, it extracts the symbols (strings) from software in the same fashion as the operative system scan for file mime-types or file sizes.
@@ -49,3 +51,5 @@ $ thundera --extract folder/
 The tool will generate a single JSON file with the list of symbols. In some cases, the output can be optimized by filtering an string.
 
 $ thundera --extract folder/ --filter filter-string
+
+
